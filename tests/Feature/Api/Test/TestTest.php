@@ -16,7 +16,7 @@ class TestTest extends TestCase
      */
     public function testBasicExample()
     {
-        $response = $this->json('GET', '/api/test/test', ['name' => 'Sally']);
+        $response = $this->json('GET', '/api/test/test');
         $response
             ->assertStatus(200)
             ->assertJson([

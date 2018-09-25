@@ -16,7 +16,7 @@ class NavTest extends TestCase
      */
     public function testBasicExample()
     {
-        $response = $this->json('GET', '/api/admin/admin/nav', ['name' => 'Sally']);
+        $response = $this->json('GET', '/api/admin/admin/nav');
         $response
             ->assertStatus(200)
             ->assertJson([

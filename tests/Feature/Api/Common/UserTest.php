@@ -16,7 +16,7 @@ class UserTest extends TestCase
      */
     public function testBasicExample()
     {
-        $response = $this->json('GET', '/api/common/user', ['name' => 'Sally']);
+        $response = $this->json('GET', '/api/common/user');
         $response
             ->assertStatus(200)
             ->assertJson([

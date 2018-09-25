@@ -16,7 +16,7 @@ class PayTest extends TestCase
      */
     public function testBasicExample()
     {
-        $response = $this->json('GET', '/api/common/pay', ['name' => 'Sally']);
+        $response = $this->json('GET', '/api/common/pay');
         $response
             ->assertStatus(200)
             ->assertJson([

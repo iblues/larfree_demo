@@ -6,6 +6,7 @@
 return [
     'detail'=>[
         'table'=>[
+            'search'=>['id','name'],
             'fields'=>[
                 'id',
             'catid',

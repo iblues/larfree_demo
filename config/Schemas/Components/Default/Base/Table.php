@@ -2,6 +2,7 @@
 return function($data,$component,$target){
     $def = [
         'fields'=>[],
+        'search'=>[],
         'config'=>[
             'api'=>'/{$COMPONENT_API}',
             'quick_change_api'=>'/{$COMPONENT_API}/{{id}}',

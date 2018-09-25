@@ -1439,7 +1439,7 @@
             "dist": {
                 "type": "path",
                 "url": "../larfree",
-                "reference": "4d1f5038cc12955f2fa37d12a1e582170a3393ae",
+                "reference": "8c63adb265b6ef592d6fed19e918a6a6cb462613",
                 "shasum": null
             },
             "require": {
@@ -1449,7 +1449,7 @@
                 "ixudra/curl": "^6.16",
                 "overtrue/laravel-filesystem-qiniu": "^1.0",
                 "overtrue/laravel-lang": "^3.0",
-                "overtrue/laravel-wechat": "^4.0",
+                "overtrue/laravel-wechat": "~4.0",
                 "phpunit/phpunit": "^7.3",
                 "predis/predis": "^1.1",
                 "watson/rememberable": "^2.0",
@@ -1460,7 +1460,11 @@
                 "laravel": {
                     "providers": [
                         "Iblues\\Larfree\\ServiceProvider"
-                    ]
+                    ],
+                    "aliases": {
+                        "ApiController": "Larfree\\Controllers\\ApisController",
+                        "AdminApiController": "Larfree\\Controllers\\AdminApisController"
+                    }
                 }
             },
             "autoload": {

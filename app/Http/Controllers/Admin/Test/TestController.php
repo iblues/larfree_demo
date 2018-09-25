@@ -7,7 +7,8 @@ namespace App\Http\Controllers\Admin\Test;
 
 use App\Models\Test\TestTest;
 use Illuminate\Http\Request;
-use Larfree\Controllers\AdminApiController as Controller;
+
+use AdminApiController as Controller;
 
 /**
  * @OA\Put(

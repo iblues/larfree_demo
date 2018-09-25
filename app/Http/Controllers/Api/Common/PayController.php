@@ -9,7 +9,7 @@ use Larfree\Libs\Payment\WechatPay;
 
 //use Auth;
 
-class PayController extends ApisController
+class PayController extends ApiController
 {
     public function __construct(CommonPay $model)
     {

@@ -46,6 +46,19 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
+        //后台的跳转地址
+        if ( $exception->getMessage()=='Unauthenticated.' && in_array('admin', $exception->guards())  ) {
+            return redirect()->guest(route('admin.login'));
+        }
+        if ( $exception->getMessage()=='Unauthenticated.' ) {
+            $json =['code'=>401,'status'=>-10,'msg'=>'需要登录','data'=>[]];
+            $response = response()->json($json);
+            $response->header('Access-Control-Allow-Origin','*');
+            $response->header('Access-Control-Allow-Headers', 'Origin, Content-Type, Authorization, Cookie, Accept');
+            $response->header('Access-Control-Allow-Methods', 'GET, POST, PATCH, PUT, PTIONS, DELETE');
+            $response->header('Access-Control-Allow-Credentials', 'false');
+            return $response;
+        }
         return parent::render($request, $exception);
     }
 }

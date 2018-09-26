@@ -10,7 +10,7 @@ namespace App\Http\Controllers\Admin\Api\Common;
 
 use App\Models\Common\User;
 
-use AdminApiController as Controller;
+use Larfree\Controllers\AdminApisController as Controller;
 
 use Illuminate\Http\Request;
 

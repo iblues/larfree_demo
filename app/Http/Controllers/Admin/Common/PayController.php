@@ -6,7 +6,7 @@
 namespace App\Http\Controllers\Admin\Common;
 
 use Illuminate\Http\Request;
-use AdminApiController as Controller;
+use Larfree\Controllers\AdminApisController as Controller;
 use App\Models\Common\CommonPay;
 
 class PayController extends Controller

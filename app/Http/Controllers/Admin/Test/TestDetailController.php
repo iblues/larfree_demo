@@ -8,7 +8,7 @@ namespace App\Http\Controllers\Admin\Test;
 use App\Models\Test\TestTestDetail;
 use Illuminate\Http\Request;
 
-use AdminApiController as Controller;
+use Larfree\Controllers\AdminApisController as Controller;
 use App\Models\Test\TestDetail;
 class TestDetailController extends Controller
 {

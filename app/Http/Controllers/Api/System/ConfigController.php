@@ -5,7 +5,7 @@
  */
 namespace App\Http\Controllers\Api\System;
 use Illuminate\Http\Request;
-use ApiController as Controller;
+use Larfree\Controllers\ApisController as Controller;
 use App\Models\Config;
 use Larfree\Libs\Schemas;
 

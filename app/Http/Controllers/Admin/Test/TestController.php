@@ -2,20 +2,22 @@
 /**
  * Larfree Api类
  * @author blues
+ * @see Larfree\Controllers\ApisController
  */
 namespace App\Http\Controllers\Admin\Test;
 
 use App\Models\Test\TestTest;
 use Illuminate\Http\Request;
+use Larfree\Controllers\AdminApisController as Controller;
 
-use AdminApiController as Controller;
+//use AdminApiController as Controller;
 
 /**
  * @OA\Put(
  *   summary="简介",
  *   description="请求该接口需要先登录。",
- *   path="/admin/nav/{id}",
- *   tags={"string"},
+ *   path="/nav/{id}",
+ *   tags={"分组"},
  *   security={{
  *     "jwt":{}
  *   }},

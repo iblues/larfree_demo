@@ -45,6 +45,7 @@ class Kernel extends HttpKernel
             'bindings',
             \Barryvdh\Cors\HandleCors::class,
             \Larfree\Middleware\ApiFormat::class,
+            \Larfree\Middleware\ApiDoc::class,
         ],
     ];
 

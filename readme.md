@@ -12,6 +12,7 @@ kernel.php
      protected $middlewareGroups = [
             'api' => [
                 ...
-                \Larfree\Middleware\ApiFormat::class, //添加api中间件
+                \Larfree\Middleware\ApiFormat::class, //Api格式化用
+                \Larfree\Middleware\ApiDoc::class,  //记录返回格式用的
             ],
       ];

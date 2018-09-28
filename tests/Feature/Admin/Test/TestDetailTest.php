@@ -18,7 +18,7 @@ class TestDetailTest extends TestCase
     {
         $response = $this->json('GET', '/api/admin/test/test_detail');
         $response
-            ->assertStatus(200)
+            ->assertStatus(422)
             ->assertJson([
                 'code' => true,
             ]);

@@ -9,6 +9,9 @@ use Tests\TestCase;
 
 class UserTest extends TestCase
 {
+    public $in = [
+        'index'=>['*'],
+    ];
     /**
      * 一个基础的功能测试示例。
      *

@@ -18,13 +18,13 @@ class TestController extends Controller
 
     public $in=[
         'index'=>[
-            'get'=>[
-                'name'=>'测试',
-                'rule'=>['required'],
-            ],
-            'select'=>[
-                'rule'=>['required'],
-            ],
+//            'get'=>[
+//                'name'=>'测试',
+//                'rule'=>['required'],
+//            ],
+//            'select'=>[
+//                'rule'=>['required'],
+//            ],
         ],
         'update'=>[
             '*',

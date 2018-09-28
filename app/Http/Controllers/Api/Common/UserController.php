@@ -10,6 +10,13 @@ use Illuminate\Http\Request;
 use Larfree\Controllers\ApisController as Controller;
 class UserController extends Controller
 {
+    public $in=[
+        'index'=>[
+            'phone'=>[
+                'rule'=>['sometimes'],
+            ],
+        ],
+    ];
     public function __construct(CommonUser $model)
     {
         $this->model = $model;

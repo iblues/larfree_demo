@@ -15,6 +15,42 @@ use Larfree\Controllers\AdminApisController as Controller;
 
 class TestController extends Controller
 {
+
+    public $in=[
+        'index'=>[
+            'get'=>[
+                'name'=>'测试',
+                'rule'=>['required'],
+            ],
+            'select'=>[
+                'rule'=>['required'],
+            ],
+        ],
+        'update'=>[
+            '*',
+            'datetime'=>[
+                'name'=>'日期',
+                'rule'=>['required','date'],
+            ],
+            'select'=>[
+                'rule'=>['required'],
+            ],
+            'title3',
+        ],
+        'store'=>[
+            '*',
+            'datetime'=>[
+                'name'=>'日期',
+                'rule'=>['required','date'],
+            ],
+            'select'=>[
+                'rule'=>['required'],
+            ],
+            'title3'=>false,
+        ]
+    ];
+
+
     public function __construct(TestTest $model )
     {
         $this->model = $model;
@@ -25,7 +61,7 @@ class TestController extends Controller
      * @OA\Get(
      *   summary="测试接口",
      *   description="获取大批量信息",
-     *   path="/test/test/",
+     *   path="/test/test_detail/",
      *   tags={"测试组"},
      *   security={{
      *     "jwt":{}

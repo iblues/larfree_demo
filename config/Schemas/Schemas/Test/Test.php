@@ -23,8 +23,9 @@ return [
                         'App\\Models\\Test\\TestTestDetail',
                     ],
 //                    'as'=>'has_many2',
-                    'field'=>['id','uid','content','test_test_id'],
-                    'select'=>['id','uid','content'],
+                    'field'=>['id','uid','content','test_test_id'],//model select
+                    'select'=>['id','uid'],//前段 select组件下拉
+                    //id=>id,name,phone
                 ],
 //                'multi'=>true,  //hasMany会自动判断
             ],

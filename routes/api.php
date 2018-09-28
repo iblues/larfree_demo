@@ -18,8 +18,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-Route::get('admin/swagger/json',  'Admin\SwaggerController@getJson');//swagger定义
-
 
 Route::resource('common/user', 'Api\Common\UserController');//自动添加-API
 Route::resource('common/pay', 'Api\Common\PayController');//自动添加-API

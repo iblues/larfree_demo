@@ -15,7 +15,11 @@ class TestDetailController extends Controller
 
     public $in=[
         'index'=>[
-            '*'
+            '*',
+            'datetime'=>[
+                'name'=>'单独定义的参数',
+                'rule'=>['required','date'],
+            ],
         ],
         'update'=>[
             '*',

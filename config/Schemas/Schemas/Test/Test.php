@@ -19,11 +19,11 @@ return [
                 'type'=>'select',
                 'link'=>[
                     'model'=>[
-                        'hasMany',
+                        'belongsToMany',
                         'App\\Models\\Test\\TestTestDetail',
                     ],
 //                    'as'=>'has_many2',
-                    'field'=>['id','uid','content','test_test_id'],//model select
+                    'field'=>['id','uid','content'],//model select
                     'select'=>['id','uid'],//前段 select组件下拉
                     //id=>id,name,phone
                 ],

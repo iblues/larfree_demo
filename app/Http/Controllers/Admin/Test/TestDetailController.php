@@ -15,12 +15,7 @@ class TestDetailController extends Controller
 
     public $in=[
         'index'=>[
-            'get'=>[
-                'name'=>'测试',
-            ],
-            'select'=>[
-                'rule'=>['required'],
-            ],
+            '*'
         ],
         'update'=>[
             '*',
@@ -56,7 +51,7 @@ class TestDetailController extends Controller
      * @OA\Get(
      *   summary="测试接口",
      *   description="获取大批量信息",
-     *   path="/test/test/",
+     *   path="/test/test_detail/",
      *   tags={"测试组"},
      *   security={{
      *     "jwt":{}

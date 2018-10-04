@@ -16,6 +16,7 @@ return [
                 'name'=>'菜单名称',
                 'tip'=>'',
                 'type'=>'text',
+//                'rule'=>['required'],
             ],
             'parent_id'=>[
                 'name'=>'父菜单项id',

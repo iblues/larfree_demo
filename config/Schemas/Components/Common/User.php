@@ -28,7 +28,7 @@ return [
             'brithday',
             'sex',
             'user_type',
-            'coupon',
+//            'coupon',
             //'api_token',
             //'openid',
             //'remember_token',
@@ -64,7 +64,7 @@ return [
             'brithday',
             'sex',
             'user_type',
-            'coupon',
+//            'coupon',
             //'api_token',
             //'openid',
             //'remember_token'

@@ -40,7 +40,7 @@ return [
                         'user_id',
                         'id'
                     ],
-                    'as'=>'user',
+//                    'as'=>'user',
 //                    'where'=>[
 //                        'status'=>0
 //                    ],

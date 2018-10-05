@@ -5,7 +5,7 @@
  */
 namespace App\Http\Controllers\Api\Test;
 use Illuminate\Http\Request;
-use Larfree\Controllers\ApiController as Controller;
+use Larfree\Controllers\ApisController as Controller;
 use App\Models\Test\TestTestDetail;
 class TestDetailController extends Controller
 {

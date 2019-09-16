@@ -1,0 +1,42 @@
+<?php
+
+namespace App\Repositories\System;
+
+use Larfree\Libs\Schemas;
+use Larfree\Repositories\LarfreeRepository;
+
+/**
+ * Class TestRepositoryEloquent.
+ *
+ * @package namespace App\Repositories\Test;
+ */
+class ConfigRepository extends LarfreeRepository
+{
+    /**
+     * Specify Model class name
+     *
+     * @return string
+     */
+    public function model()
+    {
+        return CommonUser::Class;
+    }
+
+
+    /**
+     * Boot up the repository, pushing criteria
+     */
+    public function boot()
+    {
+//        $this->pushCriteria(app(RequestCriteria::class));
+    }
+
+    public function getAllByCat($category){
+        //获取对应的配置文件 , 还需要进一步处理
+//        $data = Schemas::getSchemas('Config.'.$category);
+
+        $data = $this->model->link()->where('cat',$category)->get();
+        return $data->plick('key','value');
+    }
+
+}

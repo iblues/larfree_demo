@@ -5,6 +5,7 @@
  */
 namespace App\Http\Controllers\Api\Common;
 use App\Models\Common\CommonUser;
+use App\Repositories\Test\NavRepository;
 use Illuminate\Http\Request;
 
 use Larfree\Controllers\ApisController as Controller;
@@ -17,9 +18,9 @@ class UserController extends Controller
             ],
         ],
     ];
-    public function __construct(CommonUser $model)
+    public function __construct(NavRepository $repository)
     {
-        $this->model = $model;
+        $this->repository = $repository;
         parent::__construct();
     }
     public function show($id, Request $request)

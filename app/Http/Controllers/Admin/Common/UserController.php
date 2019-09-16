@@ -4,7 +4,7 @@
  * @author blues
  */
 namespace App\Http\Controllers\Admin\Common;
-use App\Models\Common\CommonUser;
+use App\Repositories\User\UserRepository;
 use Illuminate\Http\Request;
 use Larfree\Controllers\AdminApisController as Controller;
 class UserController extends Controller
@@ -16,9 +16,9 @@ class UserController extends Controller
             ],
         ],
     ];
-    public function __construct(CommonUser $model)
+    public function __construct(UserRepository $repository)
     {
-        $this->model = $model;
+        $this->repository = $repository;
         parent::__construct();
     }
     public function show($id, Request $request)

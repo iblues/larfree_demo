@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c5fc757d2ffb90f10671ac7471a85df2",
+    "content-hash": "bb1aa8494a4315be0480db7f58c72210",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1701,17 +1701,17 @@
         },
         {
             "name": "iblues/larfree",
-            "version": "dev-master",
+            "version": "v1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/iblues/larfree.git",
-                "reference": "0069082abe05346298b660ed298cd3ef732bd947"
+                "reference": "8c024d621d94606d8e007d56204f7f720a7b029d"
             },
             "dist": {
-                "type": "path",
-                "url": "https://api.github.com/repos/iblues/larfree/zipball/0069082abe05346298b660ed298cd3ef732bd947",
-                "reference": "0069082abe05346298b660ed298cd3ef732bd947",
-                "shasum": null,
+                "type": "zip",
+                "url": "https://api.github.com/repos/iblues/larfree/zipball/8c024d621d94606d8e007d56204f7f720a7b029d",
+                "reference": "8c024d621d94606d8e007d56204f7f720a7b029d",
+                "shasum": "",
                 "mirrors": [
                     {
                         "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
@@ -1752,7 +1752,9 @@
                 "files": [
                     "src/functions.php"
                 ]
-            }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "time": "2019-09-13T03:36:59+00:00"
         },
         {
             "name": "intervention/image",
@@ -4238,16 +4240,16 @@
         },
         {
             "name": "phpunit/php-token-stream",
-            "version": "3.1.0",
+            "version": "3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-token-stream.git",
-                "reference": "e899757bb3df5ff6e95089132f32cd59aac2220a"
+                "reference": "995192df77f63a59e47f025390d2d1fdf8f425ff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/e899757bb3df5ff6e95089132f32cd59aac2220a",
-                "reference": "e899757bb3df5ff6e95089132f32cd59aac2220a",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/995192df77f63a59e47f025390d2d1fdf8f425ff",
+                "reference": "995192df77f63a59e47f025390d2d1fdf8f425ff",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -4289,7 +4291,7 @@
             "keywords": [
                 "tokenizer"
             ],
-            "time": "2019-07-25T05:29:42+00:00"
+            "time": "2019-09-17T06:23:10+00:00"
         },
         {
             "name": "phpunit/phpunit",
@@ -8916,9 +8918,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "iblues/larfree": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

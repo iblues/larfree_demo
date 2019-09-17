@@ -6,14 +6,14 @@
 
 namespace App\Http\Controllers\Api\Test;
 
-use App\Repositories\Test\TestRepository;
+use App\Repositories\Test\TestTestRepository;
 use Illuminate\Http\Request;
 use Larfree\Controllers\ApisController as Controller;
 use App\Models\Test\TestTest;
 
 class TestController extends Controller
 {
-    public function __construct(TestTest $model, TestRepository $repository)
+    public function __construct(TestTest $model, TestTestRepository $repository)
     {
         $this->model = $model;
         $this->repository = $repository;

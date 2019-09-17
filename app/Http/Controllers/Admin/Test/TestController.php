@@ -6,8 +6,7 @@
  */
 namespace App\Http\Controllers\Admin\Test;
 
-use App\Models\Test\TestTest;
-use App\Repositories\Test\TestRepository;
+use App\Repositories\Test\TestTestRepository;
 use Illuminate\Http\Request;
 use Larfree\Controllers\AdminApisController as Controller;
 
@@ -48,7 +47,7 @@ class TestController extends Controller
     ];
 
 
-    public function __construct(TestRepository $repository )
+    public function __construct(TestTestRepository $repository )
     {
         $this->repository = $repository;
         parent::__construct();

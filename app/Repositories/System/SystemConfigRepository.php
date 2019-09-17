@@ -10,7 +10,7 @@ use Larfree\Repositories\LarfreeRepository;
  *
  * @package namespace App\Repositories\Test;
  */
-class ConfigRepository extends LarfreeRepository
+class SystemConfigRepository extends LarfreeRepository
 {
     /**
      * Specify Model class name

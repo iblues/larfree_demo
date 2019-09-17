@@ -11,7 +11,7 @@ use Larfree\Repositories\LarfreeRepository;
  *
  * @package namespace App\Repositories\Test;
  */
-class NavRepository extends LarfreeRepository
+class AdminNavRepository extends LarfreeRepository
 {
     /**
      * Specify Model class name

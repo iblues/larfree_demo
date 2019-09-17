@@ -1,9 +1,8 @@
 <?php
 
-namespace App\Repositories\Test;
+namespace App\Repositories\User;
 
-use App\Models\Test\TestTest;
-use Prettus\Repository\Criteria\RequestCriteria;
+use App\Models\Common\CommonUser;
 use App\Validators\Test\TestValidator;
 use Larfree\Repositories\LarfreeRepository;
 
@@ -12,8 +11,13 @@ use Larfree\Repositories\LarfreeRepository;
  *
  * @package namespace App\Repositories\Test;
  */
-class TestRepository extends LarfreeRepository
+class CommonUserRepository extends LarfreeRepository
 {
+
+    /**
+     * @var CommonUser
+     */
+    public $model;
     /**
      * Specify Model class name
      *
@@ -21,7 +25,7 @@ class TestRepository extends LarfreeRepository
      */
     public function model()
     {
-        return TestTest::Class;
+        return CommonUser::Class;
     }
 
 
@@ -33,4 +37,7 @@ class TestRepository extends LarfreeRepository
 //        $this->pushCriteria(app(RequestCriteria::class));
     }
 
+    public function findByPhone($phone){
+        $this->model->where('phone',$phone)->first();
+    }
 }

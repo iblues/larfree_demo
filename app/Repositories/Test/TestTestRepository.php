@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Repositories\User;
+namespace App\Repositories\Test;
 
-use App\Models\Common\CommonUser;
+use App\Models\Test\TestTest;
+use Prettus\Repository\Criteria\RequestCriteria;
 use App\Validators\Test\TestValidator;
 use Larfree\Repositories\LarfreeRepository;
 
@@ -11,7 +12,7 @@ use Larfree\Repositories\LarfreeRepository;
  *
  * @package namespace App\Repositories\Test;
  */
-class UserRepository extends LarfreeRepository
+class TestTestRepository extends LarfreeRepository
 {
     /**
      * Specify Model class name
@@ -20,7 +21,7 @@ class UserRepository extends LarfreeRepository
      */
     public function model()
     {
-        return CommonUser::Class;
+        return TestTest::Class;
     }
 
 

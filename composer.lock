@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bb1aa8494a4315be0480db7f58c72210",
+    "content-hash": "ebedff84fcdd72d5a260cb531f21f5c6",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1701,16 +1701,16 @@
         },
         {
             "name": "iblues/larfree",
-            "version": "v1.3.0",
+            "version": "v1.3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/iblues/larfree.git",
-                "reference": "8c024d621d94606d8e007d56204f7f720a7b029d"
+                "reference": "8441d759fc981f327e1b6d28326223cbdc629cb1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/iblues/larfree/zipball/8c024d621d94606d8e007d56204f7f720a7b029d",
-                "reference": "8c024d621d94606d8e007d56204f7f720a7b029d",
+                "url": "https://api.github.com/repos/iblues/larfree/zipball/8441d759fc981f327e1b6d28326223cbdc629cb1",
+                "reference": "8441d759fc981f327e1b6d28326223cbdc629cb1",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1728,6 +1728,7 @@
                 "overtrue/laravel-wechat": "~4.0",
                 "phpunit/phpunit": "^7.3",
                 "predis/predis": "^1.1",
+                "prettus/l5-repository": "^2.6",
                 "watson/rememberable": "^2.0",
                 "zgldh/qiniu-laravel-storage": "^0.10.0",
                 "zircote/swagger-php": "^3.0"
@@ -1754,7 +1755,7 @@
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
-            "time": "2019-09-13T03:36:59+00:00"
+            "time": "2019-09-17T03:57:15+00:00"
         },
         {
             "name": "intervention/image",

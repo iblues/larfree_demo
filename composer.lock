@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c5fc757d2ffb90f10671ac7471a85df2",
+    "content-hash": "8508afc6ebe4db1c1941afaab1e0431c",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1270,16 +1270,16 @@
         },
         {
             "name": "easywechat-composer/easywechat-composer",
-            "version": "1.1.7",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mingyoung/easywechat-composer.git",
-                "reference": "e35f7b61b9d4a21eac07758e522ad56f800841fe"
+                "reference": "bebd2fee768c5e47449d0317067f43bab10fe1eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mingyoung/easywechat-composer/zipball/e35f7b61b9d4a21eac07758e522ad56f800841fe",
-                "reference": "e35f7b61b9d4a21eac07758e522ad56f800841fe",
+                "url": "https://api.github.com/repos/mingyoung/easywechat-composer/zipball/bebd2fee768c5e47449d0317067f43bab10fe1eb",
+                "reference": "bebd2fee768c5e47449d0317067f43bab10fe1eb",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1316,7 +1316,7 @@
                 }
             ],
             "description": "The composer plugin for EasyWeChat",
-            "time": "2019-09-11T01:01:35+00:00"
+            "time": "2019-09-19T13:39:05+00:00"
         },
         {
             "name": "egulias/email-validator",
@@ -1701,23 +1701,12 @@
         },
         {
             "name": "iblues/larfree",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/iblues/larfree.git",
-                "reference": "0069082abe05346298b660ed298cd3ef732bd947"
-            },
+            "version": "dev-dev",
             "dist": {
                 "type": "path",
-                "url": "https://api.github.com/repos/iblues/larfree/zipball/0069082abe05346298b660ed298cd3ef732bd947",
-                "reference": "0069082abe05346298b660ed298cd3ef732bd947",
-                "shasum": null,
-                "mirrors": [
-                    {
-                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
+                "url": "../larfree",
+                "reference": "727c38eb2d02a65270cb6deb7a85da65b45ed9e2",
+                "shasum": null
             },
             "require": {
                 "barryvdh/laravel-ide-helper": "^2.5",
@@ -1728,6 +1717,7 @@
                 "overtrue/laravel-wechat": "~4.0",
                 "phpunit/phpunit": "^7.3",
                 "predis/predis": "^1.1",
+                "prettus/l5-repository": "^2.6",
                 "watson/rememberable": "^2.0",
                 "zgldh/qiniu-laravel-storage": "^0.10.0",
                 "zircote/swagger-php": "^3.0"
@@ -1752,6 +1742,9 @@
                 "files": [
                     "src/functions.php"
                 ]
+            },
+            "transport-options": {
+                "symlink": true
             }
         },
         {

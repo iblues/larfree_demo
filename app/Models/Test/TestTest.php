@@ -5,8 +5,6 @@
  */
 namespace App\Models\Test;
 use Larfree\Models\Api;
-use App\Scopes\Test\TestTestScope;
 class TestTest extends Api
 {
-    use TestTestScope;
 }

@@ -9,7 +9,6 @@ use Larfree\Models\Api;
 
 class CommonUser extends Api
 {
-    use CommonUserScope;
     public function setPasswordAttribute($value)
     {
         if($value)

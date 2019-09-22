@@ -18,7 +18,7 @@ class ComponentApiTest extends TestCase {
      * name|id$ = 20
      */
     public function testApi(){
-        $dir = self::dirToArray(base_path('/config/Schemas/Schemas'));
+        $dir = self::dirToArray(schemas_path('Schemas'));
         foreach ($dir as $key=>$value){
             foreach ($value as $v){
                 $name = explode('.',$v);

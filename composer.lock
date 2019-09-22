@@ -1705,8 +1705,7 @@
             "dist": {
                 "type": "path",
                 "url": "../larfree",
-                "reference": "727c38eb2d02a65270cb6deb7a85da65b45ed9e2",
-                "shasum": null
+                "reference": "727c38eb2d02a65270cb6deb7a85da65b45ed9e2"
             },
             "require": {
                 "barryvdh/laravel-ide-helper": "^2.5",

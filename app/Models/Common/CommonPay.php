@@ -8,5 +8,4 @@ use Larfree\Models\Api;
 use App\Scopes\Common\CommonPayScope;
 class CommonPay extends Api
 {
-    use CommonPayScope;
 }

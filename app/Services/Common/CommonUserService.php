@@ -4,7 +4,7 @@
  * @author blues
  */
 namespace App\Services\Common;
-use App\Repositories\User\CommonUserRepository;
+use App\Repositories\Common\CommonUserRepository;
 use Larfree\Services\LarfreeService;
 class CommonUserService extends LarfreeService
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Repositories\User;
+namespace App\Repositories\Common;
 
 use App\Models\Common\CommonUser;
 use App\Validators\Test\TestValidator;

@@ -5,7 +5,7 @@
  */
 namespace App\Http\Controllers\Admin\Common;
 
-use App\Repositories\User\CommonUserRepository;
+use App\Repositories\Common\CommonUserRepository;
 use Illuminate\Http\Request;
 use Larfree\Controllers\AdminApisController as Controller;
 use App\Services\Common\CommonUserService;

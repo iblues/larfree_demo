@@ -4,7 +4,7 @@
  * @author blues
  */
 namespace App\Http\Controllers\Api\Common;
-use App\Repositories\User\CommonUserRepository;
+use App\Repositories\Common\CommonUserRepository;
 use Illuminate\Http\Request;
 use Larfree\Controllers\ApisController as Controller;
 use App\Services\Common\CommonUserService;

@@ -1834,12 +1834,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/iblues/larfree.git",
-                "reference": "aa5a69a5706139339127b86d9b70b166d5be74bf"
+                "reference": "c26082745acd6ef6e80d31e21ec6acf7e475544f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/iblues/larfree/zipball/aa5a69a5706139339127b86d9b70b166d5be74bf",
-                "reference": "aa5a69a5706139339127b86d9b70b166d5be74bf",
+                "url": "https://api.github.com/repos/iblues/larfree/zipball/c26082745acd6ef6e80d31e21ec6acf7e475544f",
+                "reference": "c26082745acd6ef6e80d31e21ec6acf7e475544f",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1884,7 +1884,7 @@
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
-            "time": "2019-09-24T13:41:22+00:00"
+            "time": "2019-09-24T15:00:39+00:00"
         },
         {
             "name": "intervention/image",

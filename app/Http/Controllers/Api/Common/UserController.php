@@ -4,9 +4,9 @@
  * @author blues
  */
 namespace App\Http\Controllers\Api\Common;
+use App\Repositories\User\CommonUserRepository;
 use Illuminate\Http\Request;
 use Larfree\Controllers\ApisController as Controller;
-use App\Repositories\Common\CommonUserRepository;
 use App\Services\Common\CommonUserService;
 class UserController extends Controller
 {

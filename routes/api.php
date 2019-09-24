@@ -20,5 +20,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::resource('common/user', 'Api\Common\UserController');//用户管理
 Route::resource('common/pay', 'Api\Common\PayController');//支付管理
 Route::resource('test/test', 'Api\Test\TestController');//自动添加-API
+Route::post('user/session', 'Api\User\SessionController@store');//用户登录
 
 

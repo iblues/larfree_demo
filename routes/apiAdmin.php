@@ -16,4 +16,5 @@ use Illuminate\Http\Request;
 Route::resource('test/test', 'Test\TestController');
 Route::resource('test/test', 'Test\TestController');
 
-Route::resource('common/user', 'Common\UserController');//自动添加-ADMIN
+Route::resource('common/user', 'Common\UserController');//用户管理
+Route::post('user/session', 'User\SessionController@store');//后台登录

@@ -7,11 +7,11 @@ namespace App\Http\Controllers\Admin\Common;
 
 use Illuminate\Http\Request;
 use Larfree\Controllers\AdminApisController as Controller;
-use App\Repositories\Common\CommonUserRepository;
-use App\Services\Common\CommonUserService;
-class UserController extends Controller
+use App\Repositories\Common\CommonPayRepository;
+use App\Services\Common\CommonPayService;
+class PayController extends Controller
 {
-    public function __construct(CommonUserRepository $repository, CommonUserService $service )
+    public function __construct(CommonPayRepository $repository, CommonPayService $service )
     {
         $this->repository = $repository;
         $this->service = $service;

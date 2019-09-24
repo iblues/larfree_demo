@@ -47,9 +47,10 @@ class TestController extends Controller
     ];
 
 
-    public function __construct(TestTestRepository $repository )
+    public function __construct(TestTestRepository $repository  , TestTestRepository $service)
     {
         $this->repository = $repository;
+        $this->service = $service;
         parent::__construct();
     }
 

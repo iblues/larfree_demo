@@ -6,11 +6,6 @@ use App\Models\Common\CommonUser;
 use App\Validators\Test\TestValidator;
 use Larfree\Repositories\LarfreeRepository;
 
-/**
- * Class TestRepositoryEloquent.
- *
- * @package namespace App\Repositories\Test;
- */
 class CommonUserRepository extends LarfreeRepository
 {
 

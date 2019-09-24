@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Api\Common;
 
 use App\Models\Common\CommonPay;
+use App\Repositories\Common\CommonPayRepository;
 use App\Repositories\User\CommonUserRepository;
+use App\Services\Common\CommonPayService;
 use Illuminate\Http\Request;
 
 use Larfree\Controllers\ApisController as Controller;
@@ -13,10 +15,11 @@ use Larfree\Libs\Payment\WechatPay;
 
 class PayController extends Controller
 {
-    public function __construct(CommonPay $model,CommonUserRepository $repository)
+    public function __construct(CommonPayRepository $repository, CommonPay $model, CommonPayService $service)
     {
         $this->model = $model;
         $this->repository = $repository;
+        $this->service = $service;
         parent::__construct();
     }
 
@@ -26,12 +29,13 @@ class PayController extends Controller
      * @param Request $request
      * @return mixed
      */
-    public function show($id,Request $request){
+    public function show($id, Request $request)
+    {
         $type = $request->type;
         $pay = $this->model->find($id);
         switch ($type) {
             case 'wechatpay':
-            //当前只有微信支付
+                //当前只有微信支付
             default :
                 $payment = new WechatPay();
                 $code = $payment->pay($pay);
@@ -45,7 +49,8 @@ class PayController extends Controller
      * 就把订单状态改为已支付
      * 并同时把purchasegoods表中的添加的数据状态改为已支付
      */
-    public function notify(Request $request){
+    public function notify(Request $request)
+    {
         $type = $request->type;
         switch ($type) {
             case 'wechatpay':
@@ -58,7 +63,12 @@ class PayController extends Controller
 
 
     //前台禁止修改和编辑
-    public function store(Request $request){}
-    public function update(Request $request, $id){}
+    public function store(Request $request)
+    {
+    }
+
+    public function update(Request $request, $id)
+    {
+    }
 
 }

@@ -31,36 +31,36 @@ class UrlAdvWhereTest extends TestCase {
      * name|id$ = 20
      */
     public function testMutilField(){
-        $query = ['name|id$'=>20];
+        $query = ['name|id'=>'$%20%'];
         $sql = $this->do($query);
-        $this->assertContains('(`name` = ?) or (`id` = ?)',$sql);
+        $this->assertContains('(`name` like ?) or (`id` like ?)',$sql);
     }
 
     public function testLike(){
-        $query = ['name$'=>'%test%'];
+        $query = ['name'=>'$%test%'];
         $sql = $this->do($query);
         $this->assertContains('`name` like ?',$sql);
     }
 
     public function testBetween(){
-        $query = ['id$'=>'>1,<3'];
+        $query = ['id'=>'$>1,<3'];
         $sql = $this->do($query);
         $this->assertContains('`id` > ? and `id` <',$sql);
     }
 
     public function testEqBetween(){
-        $query = ['id$'=>'>=1,<=3'];
+        $query = ['id'=>'$>=1,<=3'];
         $sql = $this->do($query);
         $this->assertContains('`id` >= ? and `id` <=',$sql);
     }
     public function testIn(){
-        $query = ['id$'=>'[1,2,3]'];
+        $query = ['id'=>'$[1,2,3]'];
         $sql = $this->do($query);
         $this->assertContains('`id` in',$sql);
     }
 
     public function testEqBetweenOr(){
-        $query = ['id$'=>'>200 | <100'];
+        $query = ['id'=>'$>200 | <100'];
         $sql = $this->do($query);
         $this->assertContains('(`id` > ?)) or (`id` = ?)',$sql);
     }

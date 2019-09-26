@@ -1834,7 +1834,7 @@
             "dist": {
                 "type": "path",
                 "url": "../larfree",
-                "reference": "727c38eb2d02a65270cb6deb7a85da65b45ed9e2"
+                "reference": "519ca2203b6a76baef25c8ff346f39427b761153"
             },
             "require": {
                 "barryvdh/laravel-ide-helper": "^2.5",
@@ -1846,6 +1846,7 @@
                 "phpunit/phpunit": "^7.3",
                 "predis/predis": "^1.1",
                 "prettus/l5-repository": "^2.6",
+                "venturecraft/revisionable": "1.*",
                 "watson/rememberable": "^2.0",
                 "zgldh/qiniu-laravel-storage": "^0.10.0",
                 "zircote/swagger-php": "^3.0"
@@ -3433,16 +3434,16 @@
         },
         {
             "name": "overtrue/wechat",
-            "version": "4.2.3",
+            "version": "4.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/overtrue/wechat.git",
-                "reference": "8271f1c693c3cc4f707a617d86d8eeb131afb926"
+                "reference": "511f0fe01100b7ddb09302d2a86baa69ded1913e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/overtrue/wechat/zipball/8271f1c693c3cc4f707a617d86d8eeb131afb926",
-                "reference": "8271f1c693c3cc4f707a617d86d8eeb131afb926",
+                "url": "https://api.github.com/repos/overtrue/wechat/zipball/511f0fe01100b7ddb09302d2a86baa69ded1913e",
+                "reference": "511f0fe01100b7ddb09302d2a86baa69ded1913e",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -3470,7 +3471,7 @@
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^2.15",
                 "mikey179/vfsstream": "^1.6",
-                "mockery/mockery": "^1.0",
+                "mockery/mockery": "^1.2.3",
                 "phpstan/phpstan": "^0.11.12",
                 "phpunit/phpunit": "^7.5"
             },
@@ -3501,7 +3502,7 @@
                 "weixin",
                 "weixin-sdk"
             ],
-            "time": "2019-09-09T08:23:38+00:00"
+            "time": "2019-09-25T07:05:54+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -4374,16 +4375,16 @@
         },
         {
             "name": "phpunit/php-token-stream",
-            "version": "3.1.0",
+            "version": "3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-token-stream.git",
-                "reference": "e899757bb3df5ff6e95089132f32cd59aac2220a"
+                "reference": "995192df77f63a59e47f025390d2d1fdf8f425ff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/e899757bb3df5ff6e95089132f32cd59aac2220a",
-                "reference": "e899757bb3df5ff6e95089132f32cd59aac2220a",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/995192df77f63a59e47f025390d2d1fdf8f425ff",
+                "reference": "995192df77f63a59e47f025390d2d1fdf8f425ff",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -4425,7 +4426,7 @@
             "keywords": [
                 "tokenizer"
             ],
-            "time": "2019-07-25T05:29:42+00:00"
+            "time": "2019-09-17T06:23:10+00:00"
         },
         {
             "name": "phpunit/phpunit",
@@ -8361,6 +8362,65 @@
                 "laravel"
             ],
             "time": "2019-03-14T20:29:20+00:00"
+        },
+        {
+            "name": "venturecraft/revisionable",
+            "version": "1.32.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/VentureCraft/revisionable.git",
+                "reference": "4e288ba15f82a5614cf10bc18698cc8a8f374498"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/VentureCraft/revisionable/zipball/4e288ba15f82a5614cf10bc18698cc8a8f374498",
+                "reference": "4e288ba15f82a5614cf10bc18698cc8a8f374498",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "illuminate/support": "~4.0|~5.0|~5.1|^6.0",
+                "laravel/framework": "~5.4|^6.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "~3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/migrations"
+                ],
+                "psr-0": {
+                    "Venturecraft\\Revisionable": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Chris Duell",
+                    "email": "me@chrisduell.com"
+                }
+            ],
+            "description": "Keep a revision history for your models without thinking, created as a package for use with Laravel",
+            "homepage": "http://github.com/venturecraft/revisionable",
+            "keywords": [
+                "Audit",
+                "ardent",
+                "history",
+                "laravel",
+                "model",
+                "revision"
+            ],
+            "time": "2019-09-23T21:20:15+00:00"
         },
         {
             "name": "vlucas/phpdotenv",

@@ -51,7 +51,7 @@ class TestController extends Controller
     public function __construct(TestTestRepository $repository  , TestTestService $service)
     {
         $this->repository = $repository;
-        $this->service = $service;
+        $this->service = $service->setAdmin();
         parent::__construct();
     }
 

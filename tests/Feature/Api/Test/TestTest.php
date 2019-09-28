@@ -5,10 +5,13 @@
  */
 
 namespace Tests\Feature\Api;
+
+use Carbon\Carbon;
 use Tests\TestCase;
 
 class TestTest extends TestCase
 {
+
     /**
      * 一个基础的功能测试示例。
      *
@@ -17,6 +20,74 @@ class TestTest extends TestCase
     public function testBasicExample()
     {
         $response = $this->json('GET', '/api/test/test');
+        $response
+            ->assertStatus(200)
+            ->assertJson([
+                'code' => true,
+            ]);
+    }
+
+    public function testAdd()
+    {
+        $response = $this->json('POST', '/api/test/test',
+            [
+                'title' => 123,
+                'content' => 321,
+                'user_id' => 312,
+                'upload' => '333',
+                'file' => 321,
+                'price' => 123,
+                'float'=>0.2,
+                'ip'=>'192.168.0.1',
+                'datetime'=>Carbon::now()->toDateTimeString(),
+            ]
+        );
+
+        $response
+            ->assertStatus(200)
+            ->assertJson([
+                'code' => true,
+                'data'=> true,
+            ]);
+        $data = json_decode($response->getContent());
+        $id = $data->data->id;
+        $this->tupdate($id);
+    }
+
+    /**
+     * 测试更新
+     * @author Blues
+     * @param $id
+     */
+    public function tupdate($id){
+        $response = $this->json('PUT', '/api/test/test/'.$id,
+            [
+                'title'=>1111,
+                'users'=>[1,2]
+            ]
+            );
+
+        $response
+            ->assertStatus(200)
+            ->assertJson([
+                'code' => true,
+            ]);
+
+
+
+
+
+        $data = json_decode($response->getContent());
+        if(isset($data->data->users))
+            $this->assertNotEquals(count($data->data->users),0);
+
+        //继续删除测试
+        $this->tdelete($id);
+    }
+
+    public function tdelete($id){
+        $response = $this->json('delete', '/api/test/test/'.$id);
+
         $response
             ->assertStatus(200)
             ->assertJson([

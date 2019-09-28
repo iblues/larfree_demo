@@ -19,7 +19,7 @@ class UserController extends Controller
     public function __construct(CommonUserRepository $repository, CommonUserService $service )
     {
         $this->repository = $repository;
-        $this->service = $service;
+        $this->service = $service->setAdmin();
         parent::__construct();
     }
 }

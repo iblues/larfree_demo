@@ -14,7 +14,7 @@ class PayController extends Controller
     public function __construct(CommonPayRepository $repository, CommonPayService $service )
     {
         $this->repository = $repository;
-        $this->service = $service;
+        $this->service = $service->setAdmin();
         parent::__construct();
     }
 }

@@ -23,3 +23,4 @@ Route::resource('test/test', 'Api\Test\TestController');//自动添加-API
 Route::post('user/session', 'Api\User\SessionController@store');//用户登录
 
 
+

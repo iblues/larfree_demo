@@ -39,7 +39,7 @@ class AdminNavRepository extends LarfreeRepository
      * @param int $tree 树状结构
      * @return array
      */
-    public function getAdminNav($tree=1,$onlyStatus=1){
+    public function getTreeNav($tree=1,$onlyStatus=1){
 
         if($onlyStatus)
             $this->model->where('status',1);
@@ -48,7 +48,7 @@ class AdminNavRepository extends LarfreeRepository
         $nav = $nav->toArray();
         if(!$tree)
             return $nav;
-        return  listToTree($nav, 'id', 'parent_id', 'child');
+        return  listToTree($nav, 'id', 'parent_id', 'children');
 
     }
 

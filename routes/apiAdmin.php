@@ -17,3 +17,8 @@ Route::resource('test/test', 'Test\TestController');
 
 Route::resource('common/user', 'Common\UserController');//用户管理
 Route::post('user/session', 'User\SessionController@store');//后台登录
+
+/** 导航 */
+
+Route::get('admin/nav/tree',  'Admin\NavController@tree');
+Route::resource('admin/nav', 'Admin\NavController');

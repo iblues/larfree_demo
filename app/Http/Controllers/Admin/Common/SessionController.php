@@ -9,7 +9,7 @@
 namespace App\Http\Controllers\Admin\Common;
 
 use App\Models\Common\User;
-use App\Repositories\User\CommonUserRepository;
+use App\Repositories\Common\CommonUserRepository;
 use Illuminate\Http\Request;
 use Larfree\Controllers\AdminApisController;
 
@@ -96,17 +96,17 @@ class SessionController extends AdminApisController
     }
 
 
-    public function show()
+    public function show($id, Request $request)
     {
 
     }
 
-    public function index()
+    public function index(Request $request)
     {
 
     }
 
-    public function update()
+    public function update(Request $request, $id)
     {
 
     }

@@ -13,3 +13,6 @@ yarn-error.log
 .env
 .phpunit.result.cache
 1302f25c5f75e38ed771dfcd6cb307de
+.phpstorm.meta.php
+_ide_helper.php
+_ide_helper_models.php

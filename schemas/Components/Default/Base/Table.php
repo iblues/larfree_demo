@@ -11,7 +11,7 @@ return function($data,$component,$target){
                     'type'=>'primary',
                     'html'=>'添加',
                     'action'=>'add',
-                    'url'=>'edit/{$COMPONENT}'
+                    'url'=>'/dialog/edit/{$COMPONENT}'
                 ],
             ],
             'action'=>[
@@ -19,7 +19,7 @@ return function($data,$component,$target){
                     'type'=>'primary',
                     'html'=>'编辑',
                     'action'=>'/',
-                    'url'=>'edit/{$COMPONENT}/{{id}}',
+                    'url'=>'/dialog/edit/{$COMPONENT}/{{id}}',
                 ],
                 'del'=>[
                     'type'=>'danger',

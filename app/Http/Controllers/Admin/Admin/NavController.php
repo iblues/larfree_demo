@@ -11,9 +11,12 @@ use App\Repositories\Admin\AdminNavRepository;
 use App\Services\Admin\AdminNavService;
 class NavController extends Controller
 {
-    public function __construct(AdminNavRepository $repository, AdminNavService $service )
+    /**
+     * @var AdminNavService
+     */
+    public $service;
+    public function __construct( AdminNavService $service )
     {
-        $this->repository = $repository;
         $this->service = $service;
         $this->service->setAdmin();
         parent::__construct();

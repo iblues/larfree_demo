@@ -44,8 +44,14 @@ class SessionController extends Controller
         if (Auth::guard('api')->attempt($credentials)) {
             $this->setMsg('登录成功');
             return getLoginUser();
-        }else{
+        } else {
             apiError('登录失败');
         }
+    }
+
+    public function loginout()
+    {
+        //前端清理掉token即可
+        return '退出成功';
     }
 }

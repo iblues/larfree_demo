@@ -22,4 +22,11 @@ class UserController extends Controller
         $this->service = $service->setAdmin();
         parent::__construct();
     }
+
+    public function show($id,Request $request){
+        if($id==0){
+            $id = getLoginUserID();
+        }
+        return parent::show($id,$request);
+    }
 }

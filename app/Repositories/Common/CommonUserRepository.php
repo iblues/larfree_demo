@@ -32,7 +32,12 @@ class CommonUserRepository extends LarfreeRepository
 //        $this->pushCriteria(app(RequestCriteria::class));
     }
 
+    /**
+     * @author Blues
+     * @param $phone
+     * @return CommonUser
+     */
     public function findByPhone($phone){
-        $this->model->where('phone',$phone)->first();
+        return $this->model->where('phone',$phone)->first();
     }
 }

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "756e7d68187b885673de5cd76cad24fb",
+    "content-hash": "22d6aa455f69321f094cb8a24ccd407b",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1834,12 +1834,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/iblues/larfree.git",
-                "reference": "c0d10b31791c9bf5c5ef3c9ab51930d7ec27430e"
+                "reference": "36a29db4a792eadec29b5dc6d138ad73ecff6e34"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/iblues/larfree/zipball/c0d10b31791c9bf5c5ef3c9ab51930d7ec27430e",
-                "reference": "c0d10b31791c9bf5c5ef3c9ab51930d7ec27430e",
+                "url": "https://api.github.com/repos/iblues/larfree/zipball/36a29db4a792eadec29b5dc6d138ad73ecff6e34",
+                "reference": "36a29db4a792eadec29b5dc6d138ad73ecff6e34",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1885,7 +1885,7 @@
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
-            "time": "2019-09-28T12:59:55+00:00"
+            "time": "2019-10-31T10:10:20+00:00"
         },
         {
             "name": "intervention/image",

@@ -13,8 +13,9 @@ return [
     |
     */
 
-    'default' => env('FILESYSTEM_DRIVER', 'oss'),
-    'file_type' => env('FILF_TYPE', 'oss'),
+    'default' => env('FILESYSTEM_DRIVER', 'local'),
+    'file_type' => env('FILESYSTEM_DRIVER', 'oss'),
+    'file_domain'=> env('FILESYSTEM_DOMAIN',''),
 
     /*
     |--------------------------------------------------------------------------

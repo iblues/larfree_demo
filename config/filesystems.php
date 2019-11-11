@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'default' => env('FILESYSTEM_DRIVER', 'local'),
+    'default' =>  'local',
     'file_type' => env('FILESYSTEM_DRIVER', 'oss'),
     'file_domain'=> env('FILESYSTEM_DOMAIN',''),
 

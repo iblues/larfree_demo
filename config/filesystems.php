@@ -14,6 +14,7 @@ return [
     */
 
     'default' => env('FILESYSTEM_DRIVER', 'oss'),
+    'file_type' => env('FILF_TYPE', 'oss'),
 
     /*
     |--------------------------------------------------------------------------

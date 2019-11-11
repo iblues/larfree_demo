@@ -1882,12 +1882,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/iblues/larfree.git",
-                "reference": "53042cab149a186c45e694e399430f961f1522b2"
+                "reference": "11de19414ad232c2934552d69e8198d4f7c8ee54"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/iblues/larfree/zipball/53042cab149a186c45e694e399430f961f1522b2",
-                "reference": "53042cab149a186c45e694e399430f961f1522b2",
+                "url": "https://api.github.com/repos/iblues/larfree/zipball/11de19414ad232c2934552d69e8198d4f7c8ee54",
+                "reference": "11de19414ad232c2934552d69e8198d4f7c8ee54",
                 "shasum": "",
                 "mirrors": [
                     {

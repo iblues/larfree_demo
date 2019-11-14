@@ -28,6 +28,7 @@ return [
                 'url',
                 'class',
                 'module',
+                'icon',
                 'parent_id',
                 'ranking',
                 'status'
@@ -40,6 +41,7 @@ return [
                 'url',
                 'class',
                 'module',
+                'icon',
                 'parent_id',
                 'ranking',
                 'status'

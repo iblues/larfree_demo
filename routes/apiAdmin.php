@@ -14,7 +14,7 @@ use Illuminate\Http\Request;
 Route::post('user/session', 'User\SessionController@store');//后台登录
 
 Route::middleware('api.auth')->group(function () {
-    Route::resource('test/test', 'Admin\Test\TestController');//测试用
+    Route::larfreeResource('test/test', 'Admin\Test\TestController');//测试用
 
     Route::resource('common/user', 'Admin\Common\UserController');//用户管理
     Route::get('user/admin/{id}', 'Admin\Common\UserController@show');//获取当前用户信息

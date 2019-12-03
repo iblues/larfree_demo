@@ -4,90 +4,92 @@
  * 也可以自己指定
  */
 return [
-    'detail'=>[
-        'table'=>[
-            'search'=>[
+    'detail' => [
+        'table' => [
+            'search' => [
+                'id',
+                'name',
+                'phone',
+                'email',
+
+            ],
+            'adv_search' => [
+                'nickname',
+                'brithday',
+                'sex',
+                'user_type',
+            ],
+            'fields' => [
                 'id',
                 'name',
                 'nickname',
                 'picture',
                 'phone',
                 'email',
+                //'password',
                 'brithday',
                 'sex',
                 'user_type',
-            ],
-            'fields'=>[
-                'id',
-            'name',
-            'nickname',
-            'picture',
-            'phone',
-            'email',
-            //'password',
-            'brithday',
-            'sex',
-            'user_type',
 //            'coupon',
-            //'api_token',
-            //'openid',
-            //'remember_token',
-            //'created_at',
-            //'updated_at'
-             ],
-        ],
-        'add'=>[
-            'fields'=>[
-                'name',
-            'nickname',
-            'picture',
-            'phone',
-            'email',
-            //'password',
-            'brithday',
-            'sex',
-            'user_type',
-            //'own',
-            //'api_token',
-            //'openid',
-            //'remember_token'
-             ],
-        ],
-        'edit'=>[
-            'fields'=>[
-                'name',
-            'nickname',
-            'picture',
-            'phone',
-            'email',
-            //'password',
-            'brithday',
-            'sex',
-            'user_type',
-//            'coupon',
-            //'api_token',
-            //'openid',
-            //'remember_token'
+                //'api_token',
+                //'openid',
+                //'remember_token',
+                //'created_at',
+                //'updated_at'
             ],
         ],
-        'detail'=>[
-            'fields'=>[
+        'add' => [
+            'fields' => [
+                'name',
+                'nickname',
+                'picture',
+                'phone',
+                'email',
+                //'password',
+                'brithday',
+                'sex',
+                'user_type',
+                //'own',
+                //'api_token',
+                //'openid',
+                //'remember_token'
+            ],
+        ],
+        'edit' => [
+            'fields' => [
+                'name',
+                'nickname',
+                'picture',
+                'phone',
+                'email',
+                //'password',
+                'brithday',
+                'sex',
+                'user_type',
+//            'coupon',
+                //'api_token',
+                //'openid',
+                //'remember_token'
+            ],
+        ],
+        'detail' => [
+            'fields' => [
                 'id',
-            'name',
-            'nickname',
-            'picture',
-            'phone',
-            'email',
-            //'password',
-            'brithday',
-            'sex',
-            'user_type',
-            //'own',
-            //'api_token',
-            //'openid',
-            //'remember_token',
-            //'created_at',
-            //'updated_at'
+                'name',
+                'nickname',
+                'picture',
+                'phone',
+                'email',
+                //'password',
+                'brithday',
+                'sex',
+                'user_type',
+                //'own',
+                //'api_token',
+                //'openid',
+                //'remember_token',
+                //'created_at',
+                //'updated_at'
             ],
         ],
     ],

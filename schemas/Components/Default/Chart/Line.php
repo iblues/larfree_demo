@@ -10,7 +10,7 @@ return function($data,$component,$target){
         'title'=>'',
         'sub_title'=>'',
         'y_unit'=>'',
-        'url'=>route('admin.api.root').'/{$COMPONENT_API}/?@chart={$COMPONENT}|'.$component.'.'.$target,
+        'url'=>route('admin.api.root').'/{$COMPONENT_API}?@chart={$COMPONENT}|'.$component.'.'.$target,
         'type'=>['line','bar'],
         'x'=>[
             'name'=>'日期',

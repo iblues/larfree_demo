@@ -128,6 +128,29 @@ return [
             'fields' => [
                 '随便不重复' => [
                     'name' => '分组1',
+                    'condition'=>'{{price}}>5',//满足条件才显示
+                    'group_children' =>
+                        ['title' => ['name' => '换标题'], 'user_id'=>['condition'=>'{{price}}>10']],
+                ],
+                'group_2' => [
+                    'name' => '分组2',
+                    'group_children' => ['price'=>['default'=>20,'tip'=>'4,6,20会有不同效果'], 'float', 'ip'],
+                ],
+                'has_many',
+                'content',
+                //            'user_id',
+                //            'select',
+                'upload'=>['condition'=>'{{price}}>10'],//满足条件才显示
+                'file'=>['condition'=>'{{price}}<=10'],//满足条件才显示
+                'timestamp',
+                'datetime'
+            ],
+        ],
+        'edit' => [
+            'fields' => [
+                '随便不重复' => [
+                    'name' => '分组1',
+                    'condition'=>'{{price}}>1',//满足条件才显示
                     'group_children' =>
                         ['title' => ['name' => '换标题'], 'user_id'],
                 ],
@@ -139,24 +162,8 @@ return [
                 'content',
                 //            'user_id',
                 //            'select',
-                'upload',
-                'file',
-                'timestamp',
-                'datetime'
-            ],
-        ],
-        'edit' => [
-            'fields' => [
-                'title',
-                'has_many',
-                'content',
-                'user_id',
-                'select',
-                'upload',
-                'file',
-                'price',
-                'float',
-                'ip',
+                'upload'=>['condition'=>'{{price}}>1'],//满足条件才显示
+                'file'=>['condition'=>'{{price}}<=1'],//满足条件才显示
                 'timestamp',
                 'datetime'
             ],

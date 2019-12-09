@@ -11,14 +11,14 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::post('user/session', 'User\SessionController@store');//后台登录
+Route::post('user/session', 'Admin\User\SessionController@store');//后台登录
 
 Route::middleware('api.auth')->group(function () {
     Route::larfreeResource('test/test', 'Admin\Test\TestController');//测试用
 
     Route::resource('common/user', 'Admin\Common\UserController');//用户管理
     Route::get('user/admin/{id}', 'Admin\Common\UserController@show');//获取当前用户信息
-    Route::post('user/session', 'Admin\User\SessionController@store');//后台登录
+//    Route::post('user/session', 'Admin\User\SessionController@store');//后台登录
     Route::delete('user/session', 'Admin\User\SessionController@loginout');//后台退出
 
     Route::get('admin/nav/tree', 'Admin\Admin\NavController@tree');//树桩导航

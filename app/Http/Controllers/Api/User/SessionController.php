@@ -41,9 +41,11 @@ class SessionController extends Controller
     public function store(Request $request)
     {
         $credentials = $request->only('phone', 'password');
-        if (Auth::guard('api')->attempt($credentials)) {
+        if ($token = Auth::guard('api')->attempt($credentials)) {
             $this->setMsg('登录成功');
-            return getLoginUser();
+            $user = getLoginUser();
+            $user->token = $token;
+            return $user;
         }else{
             apiError('登录失败');
         }

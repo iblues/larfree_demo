@@ -13,7 +13,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Schema::defaultStringLength(191);//低版本mysql
+        \URL::forceScheme(Request()->secure()?'https':'http');//自动判断https
     }
 
     /**

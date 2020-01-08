@@ -15,10 +15,9 @@ use Larfree\Libs\Payment\WechatPay;
 
 class PayController extends Controller
 {
-    public function __construct(CommonPayRepository $repository, CommonPay $model, CommonPayService $service)
+    public function __construct( CommonPay $model, CommonPayService $service)
     {
         $this->model = $model;
-        $this->repository = $repository;
         $this->service = $service;
         parent::__construct();
     }

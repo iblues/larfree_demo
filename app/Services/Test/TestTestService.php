@@ -4,17 +4,19 @@
  * @author blues
  */
 namespace App\Services\Test;
-use Larfree\Services\LarfreeService;
+use App\Models\Test\TestTest;
 use App\Repositories\Test\TestTestRepository;
-class TestTestService extends LarfreeService
+use Larfree\Services\SimpleLarfreeService;
+
+class TestTestService extends SimpleLarfreeService
 {
     /**
-     * @var TestTestRepository
+     * @var TestTest
      */
-    public $repository;
-    public function __construct(TestTestRepository $repository )
+    protected $model;
+    public function __construct(TestTest $model )
     {
-        $this->repository = $repository;
+        $this->model = $model;
         parent::__construct();
     }
 }

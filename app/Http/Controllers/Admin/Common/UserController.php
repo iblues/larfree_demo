@@ -12,13 +12,12 @@ use App\Services\Common\CommonUserService;
 class UserController extends Controller
 {
     /**
-     * UserController constructor.
-     * @param CommonUserRepository $repository
-     * @param CommonUserService $service
+     * @var CommonUserService
      */
-    public function __construct(CommonUserRepository $repository, CommonUserService $service )
+    protected $service;
+    public function __construct(CommonUserService $service)
     {
-        $this->repository = $repository;
+        $this->service = $service;
         $this->service = $service->setAdmin();
         parent::__construct();
     }

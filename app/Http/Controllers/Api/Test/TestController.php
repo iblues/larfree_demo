@@ -10,9 +10,8 @@ use App\Repositories\Test\TestTestRepository;
 use App\Services\Test\TestTestService;
 class TestController extends Controller
 {
-    public function __construct(TestTestRepository $repository ,TestTestService $service)
+    public function __construct(TestTestService $service)
     {
-        $this->repository = $repository;
         $this->service = $service;
         parent::__construct();
     }

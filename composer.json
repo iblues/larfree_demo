@@ -13,6 +13,7 @@
         "caouecs/laravel-lang": "^4.0",
         "fideloper/proxy": "^4.0",
         "iblues/larfree": "dev-dev",
+        "iblues/larfree-permission": "dev-master",
         "kalnoy/nestedset": "^5.0",
         "laravel/framework": "^5.8.0",
         "laravel/nexmo-notification-channel": "^2.1",
@@ -23,6 +24,7 @@
         "tymon/jwt-auth": "1.0.0-rc.4.1"
     },
     "require-dev": {
+        "itsgoingd/clockwork": "^4.0",
         "barryvdh/laravel-ide-helper": "^2.6",
         "beyondcode/laravel-dump-server": "^1.0",
         "filp/whoops": "^2.0",
@@ -74,6 +76,13 @@
         "0": {
             "type": "path",
             "url": "../larfree",
+            "options": {
+                "symlink": true
+            }
+        },
+        "1": {
+            "type": "path",
+            "url": "/Users/lanyang/Desktop/www/composer/larfree-permission",
             "options": {
                 "symlink": true
             }

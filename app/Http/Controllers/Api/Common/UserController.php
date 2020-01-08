@@ -10,9 +10,12 @@ use Larfree\Controllers\ApisController as Controller;
 use App\Services\Common\CommonUserService;
 class UserController extends Controller
 {
-    public function __construct(CommonUserRepository $repository ,CommonUserService $service)
+    /**
+     * @var CommonUserService
+     */
+    protected $service;
+    public function __construct(CommonUserService $service)
     {
-        $this->repository = $repository;
         $this->service = $service;
         parent::__construct();
     }

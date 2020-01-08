@@ -10,37 +10,12 @@ namespace App\Http\Controllers\Admin\Common;
 
 use App\Models\Common\User;
 use App\Repositories\Common\CommonUserRepository;
+use App\Services\Common\CommonUserService;
 use Illuminate\Http\Request;
 use Larfree\Controllers\AdminApisController;
 
 class SessionController extends AdminApisController
 {
-//    /**
-//     * @param Request $request
-//     * 登录验证
-//     */
-//    public function store(Request $request)
-//    {
-//        $phone = $request->phone;//手机号
-//        $password = $request->password;//密码
-//        $user = User::where('phone', $phone)->first();
-//        if ($user) {
-//            $pwdverify = password_verify($password, $user->password);
-//            if ($pwdverify) {
-//                if (!$user->api_token) {
-//                    $user->api_token = str_random(32);
-//                    $user->save();
-//                }
-//                if ($user) {
-//                    return Response(['msg' => '登录成功', 'data' => $user]);
-//                }
-//            } else {
-//                apiError('密码错误,请重新登录', [], 403);
-//            }
-//        } else {
-//            apiError('密码错误,请重新登录', [], 403);
-//        }
-//    }
 
     public $in = [
         'store' => [
@@ -53,9 +28,14 @@ class SessionController extends AdminApisController
         ],
     ];
 
-    public function __construct(CommonUserRepository $repository)
+    /**
+     * @var CommonUserService
+     */
+    protected $service;
+
+    public function __construct(CommonUserService $service)
     {
-        $this->repository = $repository;
+        $this->service = $service;
     }
 
 
@@ -74,7 +54,7 @@ class SessionController extends AdminApisController
     public function store(Request $request)
     {
 
-        $User = $this->repository;
+        $User = $this->service;
 
         $user = $User->findByPhone($request->phone);
 

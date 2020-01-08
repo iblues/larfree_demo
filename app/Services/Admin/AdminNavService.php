@@ -4,23 +4,25 @@
  * @author blues
  */
 namespace App\Services\Admin;
-use Larfree\Services\LarfreeService;
+use App\Models\Admin\AdminNav;
 use App\Repositories\Admin\AdminNavRepository;
-class AdminNavService extends LarfreeService
+use Larfree\Services\SimpleLarfreeService;
+
+class AdminNavService extends SimpleLarfreeService
 {
     /**
-     * @var AdminNavRepository
+     * @var AdminNav
      */
-    public $repository;
-    public function __construct(AdminNavRepository $repository )
+    protected $model;
+    public function __construct(AdminNav $model )
     {
-        $this->repository = $repository;
+        $this->model = $model;
         parent::__construct();
     }
 
     public function getTreeNav()
     {
-        return $this->repository->getTreeNav();
+        return $this->model::getTreeNav($this->model);
     }
 
 }

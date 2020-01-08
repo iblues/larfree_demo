@@ -2,6 +2,7 @@
 
 namespace App\Repositories\Admin;
 
+use App\Events\Permission\FilterNavEvent;
 use App\Models\Admin\AdminNav;
 use App\Validators\Test\TestValidator;
 use Larfree\Repositories\LarfreeRepository;
@@ -13,6 +14,10 @@ use Larfree\Repositories\LarfreeRepository;
  */
 class AdminNavRepository extends LarfreeRepository
 {
+    /**
+     * @var AdminNav
+     */
+    protected $model;
     /**
      * Specify Model class name
      *
@@ -32,24 +37,5 @@ class AdminNavRepository extends LarfreeRepository
 //        $this->pushCriteria(app(RequestCriteria::class));
     }
 
-
-    /**
-     * 返回后台的目录.
-     * @author Blues
-     * @param int $tree 树状结构
-     * @return array
-     */
-    public function getTreeNav($tree=1,$onlyStatus=1){
-
-        if($onlyStatus)
-            $this->model->where('status',1);
-
-        $nav = $this->model->orderBy('ranking','desc')->get();
-        $nav = $nav->toArray();
-        if(!$tree)
-            return $nav;
-        return  listToTree($nav, 'id', 'parent_id', 'children');
-
-    }
 
 }

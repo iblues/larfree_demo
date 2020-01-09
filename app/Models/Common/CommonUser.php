@@ -48,4 +48,14 @@ class CommonUser extends ApiUser implements JWTSubject
     }
 
 
+    /**
+     * @author Blues
+     * @param $phone
+     * @return CommonUser
+     */
+    static public function findByPhone($phone){
+        return static::where('phone',$phone)->first();
+    }
+
+
 }

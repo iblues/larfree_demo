@@ -6,6 +6,12 @@ use App\Models\Common\CommonUser;
 use App\Validators\Test\TestValidator;
 use Larfree\Repositories\LarfreeRepository;
 
+/**
+ * @author Blues
+ * Class CommonUserRepository
+ * @package App\Repositories\Common
+ * @deprecated
+ */
 class CommonUserRepository extends LarfreeRepository
 {
 

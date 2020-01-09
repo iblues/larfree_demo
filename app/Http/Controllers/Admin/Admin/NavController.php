@@ -7,7 +7,6 @@ namespace App\Http\Controllers\Admin\Admin;
 
 use Illuminate\Http\Request;
 use Larfree\Controllers\AdminApisController as Controller;
-use App\Repositories\Admin\AdminNavRepository;
 use App\Services\Admin\AdminNavService;
 class NavController extends Controller
 {

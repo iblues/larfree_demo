@@ -5,7 +5,6 @@
  */
 namespace App\Services\Admin;
 use App\Models\Admin\AdminNav;
-use App\Repositories\Admin\AdminNavRepository;
 use Larfree\Services\SimpleLarfreeService;
 
 class AdminNavService extends SimpleLarfreeService
@@ -19,6 +18,7 @@ class AdminNavService extends SimpleLarfreeService
         $this->model = $model;
         parent::__construct();
     }
+
 
     public function getTreeNav()
     {

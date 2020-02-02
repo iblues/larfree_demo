@@ -13,14 +13,13 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::middleware('auth:api')->group(function (){
+    Route::apiResource('common/user', 'Api\Common\UserController');//用户管理
+    Route::apiResource('common/pay', 'Api\Common\PayController');//支付管理
+    Route::apiResource('test/test', 'Api\Test\TestController');//自动添加-API
 });
-
-Route::apiResource('common/user', 'Api\Common\UserController');//用户管理
-Route::apiResource('common/pay', 'Api\Common\PayController');//支付管理
-Route::apiResource('test/test', 'Api\Test\TestController');//自动添加-API
-Route::post('user/session', 'Api\User\SessionController@store');//用户登录
+//需要命名个login. 否则验证会找不到login
+Route::post('user/session', 'Api\User\SessionController@store')->name('login');
 
 
 

@@ -36,6 +36,7 @@ class TestController extends Controller
      *
      *
      * @ATU\Api(
+     *     @ATU\Now(),
      *     @ATU\Response({
      *      "data":true,"status":1
      *     }),
@@ -43,6 +44,7 @@ class TestController extends Controller
      *
      * 验证权限中间件
      * @ATU\Api(
+     *     @ATU\Now(),
      *     @ATU\Login(false),
      *     @ATU\Response(401),
      * )
@@ -89,7 +91,6 @@ class TestController extends Controller
      * @throws \Exception
      * @author Blues
      * @ATU\Api(
-     *     @ATU\Now(),
      *     @ATU\Before("createTest",{"param":"not use"}),
      *     @ATU\Request({"title":"测试","content":@ATU\GetParam("test.title"),"user_id":"123"}),
      *     @ATU\Response({

@@ -100,6 +100,7 @@ class AtuDevTest extends TestCase
     {
         $this->AtuSetUp();
         $this->doNow();
+//        $this->doNow(['tag'=>'test2']);
     }
 
     /**

@@ -12,6 +12,7 @@ use Illuminate\Http\Request;
 use Larfree\Controllers\ApisController as Controller;
 use App\Repositories\Test\TestTestRepository;
 use App\Services\Test\TestTestService;
+use OpenApi\Annotations as OA;
 
 class TestController extends Controller
 {
@@ -72,6 +73,7 @@ class TestController extends Controller
      * @ATU\Api(
      *     path=@ATU\GetParam("test.id"),
      *     method="GET",
+     *     @ATU\Now(),
      *     @ATU\Before("createTest"),
      *     @ATU\Response({
      *      "status":1,

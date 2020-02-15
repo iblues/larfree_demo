@@ -28,7 +28,7 @@ class AtuDevTest extends TestCase
     /**
      * 是否启用缓存,加速解析.
      */
-    protected $cache = true;
+    protected $cache = false;
 
     /**
      * 用户模型,用于登录使用.

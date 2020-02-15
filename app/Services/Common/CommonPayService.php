@@ -3,18 +3,23 @@
  * 仓库类. 所有数据交互通过此模式
  * @author blues
  */
+
 namespace App\Services\Common;
-use Larfree\Services\LarfreeService;
+
+use App\Models\Common\CommonPay;
 use App\Repositories\Common\CommonPayRepository;
-class CommonPayService extends LarfreeService
+use Larfree\Services\SimpleLarfreeService;
+
+class CommonPayService extends SimpleLarfreeService
 {
     /**
-     * @var CommonPayRepository
+     * @var CommonPay
      */
-    public $repository;
-    public function __construct(CommonPayRepository $repository )
+    public $model;
+
+    public function __construct(CommonPay $model)
     {
-        $this->repository = $repository;
+        $this->model = $model;
         parent::__construct();
     }
 }

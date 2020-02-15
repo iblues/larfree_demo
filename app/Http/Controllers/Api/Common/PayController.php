@@ -3,8 +3,6 @@
 namespace App\Http\Controllers\Api\Common;
 
 use App\Models\Common\CommonPay;
-use App\Repositories\Common\CommonPayRepository;
-use App\Repositories\User\CommonUserRepository;
 use App\Services\Common\CommonPayService;
 use Illuminate\Http\Request;
 
@@ -15,7 +13,7 @@ use Larfree\Libs\Payment\WechatPay;
 
 class PayController extends Controller
 {
-    public function __construct( CommonPay $model, CommonPayService $service)
+    public function __construct(CommonPay $model, CommonPayService $service)
     {
         $this->model = $model;
         $this->service = $service;

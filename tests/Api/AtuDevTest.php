@@ -3,6 +3,7 @@
 namespace Tests\Feature;
 
 use App\Models\Common\CommonUser;
+use Carbon\Carbon;
 use Iblues\AnnotationTestUnit\Traits\ApiTest;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Larfree\Models\Test\TestTest;
@@ -55,6 +56,11 @@ class AtuDevTest extends TestCase
     public $blackList = ['get'=>[]];
 //    protected $blackList = ['get' => ['/\/api\/admin\/.*?/i'], 'put'=>['\/api\/[^((?!admin).)*$]', 'delete'=>'', 'post'=>''];
 
+    /**
+     * 是否开启全局debug模式.相当于给每个都加了@DEBUG
+     * @var bool
+     */
+    protected $debug=false;
 
     /**
      * setUp会执行多次, 如果只想执行一次,请用AtuSetUp代替
@@ -126,6 +132,14 @@ class AtuDevTest extends TestCase
     {
         $user = [
             'title' => '测试2',
+            'content'=> "测试3",
+            'user_id'=>1,
+            'upload'=>'1',
+            'file'=>3,
+            'price'=>0.1,
+            'float'=>0.1,
+            'ip'=>'192.168.0.1',
+            'datetime'=>Carbon::now()
         ];
         $model = TestTest::firstOrCreate($user);
         $this->setParam('test', $model);

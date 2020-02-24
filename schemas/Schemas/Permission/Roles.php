@@ -30,7 +30,7 @@ return [
             'tip' => '',
             'type' => 'tree',
             //哪怕link没有值, 也需要存在,代表他有值
-            'link' =>true,
+            'link' =>[],
             'component_param'=>[
                 'key'=>'target_id',
                 'value'=>'name',
@@ -45,7 +45,7 @@ return [
             'tip' => '',
             'type' => 'select',
             //哪怕link没有值, 也需要存在,代表他有值
-            'link' =>true,
+            'link' =>[],
             'component_param'=>[
                 'key'=>'target_id',
                 'value'=>'name',

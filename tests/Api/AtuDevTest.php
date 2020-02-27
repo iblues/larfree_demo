@@ -93,7 +93,7 @@ class AtuDevTest extends TestCase
     public function testAll()
     {
         $this->AtuSetUp();
-        $this->doAll();
+         $this->doAll();
     }
 
     /**
@@ -122,27 +122,6 @@ class AtuDevTest extends TestCase
         ];
         $model = $this->userModel::firstOrCreate($user);
         $this->setParam('user', $model);
-    }
-
-    /**
-     * @author Blues
-     *
-     */
-    public function createTest()
-    {
-        $user = [
-            'title' => '测试2',
-            'content'=> "测试3",
-            'user_id'=>1,
-            'upload'=>'1',
-            'file'=>3,
-            'price'=>0.1,
-            'float'=>0.1,
-            'ip'=>'192.168.0.1',
-            'datetime'=>Carbon::now()
-        ];
-        $model = TestTest::firstOrCreate($user);
-        $this->setParam('test', $model);
     }
 
 

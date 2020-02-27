@@ -40,7 +40,6 @@ class SessionController extends Controller
      * @throws \Larfree\Exceptions\ApiException
      * @ATU\Api(
      *     title="后台登录接口",
-     *     @ATU\Now(),
      *     @ATU\Request({"phone":"18008010521","password":123}),
      *     @ATU\Response({"data":{"token":true}})
      * )

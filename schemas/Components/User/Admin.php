@@ -6,6 +6,12 @@
 return [
     'detail' => [
         'table' => [
+            'search'=>[
+                'name',
+                'user_id',
+                'roles',
+                'status',
+            ],
             'fields' => [
                 'id',
                 'name',
@@ -18,6 +24,7 @@ return [
             'fields' => [
                 'name',
                 'user_id',
+                'roles',
                 'comment',
                 'status'
             ],
@@ -26,6 +33,7 @@ return [
             'fields' => [
                 'name',
                 'user_id',
+                'roles',
                 'comment',
                 'status'
             ],
@@ -35,6 +43,7 @@ return [
                 'id',
                 'name',
                 'user_id',
+                'roles',
                 'comment',
                 'status',
                 'created_at',

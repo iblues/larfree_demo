@@ -44,8 +44,8 @@ return [
             'name' => '权限类型',
             'tip' => '',
             'type' => 'select',
-            //哪怕link没有值, 也需要存在,代表他有值
-            'link' =>[],
+            //先暂停该字段
+//            'link' =>[],
             'component_param'=>[
                 'key'=>'target_id',
                 'value'=>'name',

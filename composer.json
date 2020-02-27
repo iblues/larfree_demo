@@ -14,7 +14,7 @@
         "fideloper/proxy": "^4.0",
         "iblues/annotation-test-unit": "dev-master",
         "iblues/larfree": "dev-dev",
-        "iblues/larfree-permission": "dev-master",
+        "iblues/larfree-permission": "dev-dev",
         "kalnoy/nestedset": "^5.0",
         "laravel/framework": "^5.8.0",
         "laravel/nexmo-notification-channel": "^2.1",

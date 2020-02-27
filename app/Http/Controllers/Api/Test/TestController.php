@@ -6,6 +6,7 @@
 
 namespace App\Http\Controllers\Api\Test;
 
+use App\Models\Test\TestTest;
 use App\UserController;
 use Iblues\AnnotationTestUnit\Annotation as ATU;
 use Illuminate\Http\Request;
@@ -44,7 +45,6 @@ class TestController extends Controller
      *
      * @ATU\Api(
      *     title="测试标题",
-     *     @ATU\Now(),
      * )
      *
      * 验证权限中间件
@@ -74,14 +74,17 @@ class TestController extends Controller
      * @throws \Exception
      * @author Blues
      * @ATU\Api(
-     *     path=@ATU\GetParam("test.id"),
-     *     method="GET",
-     *     @ATU\Before("createTest"),
+     *     path=@ATU\GetParam("TestTest.id"),
+     *     @ATU\Before("create",{TestTest::class,{"title":"测试"} }),
      *     @ATU\Response({
      *      "status":1,
-     *      "data":{"title":@ATU\GetParam("test.title")},
+     *      "data":{"title":@ATU\GetParam("TestTest.title")},
      *     }),
-     *     @ATU\Assert("assertDatabaseHas",{"test_test",{"title":@ATU\GetParam("test.title")} }),
+     *     @ATU\Assert("assertDatabaseHas",{"test_test",{"title":@ATU\GetParam("TestTest.title")} }),
+     * )
+     *
+     * @ATU\Api(
+     *     path="latest"
      * )
      */
     public function show($id, Request $request)
@@ -95,12 +98,12 @@ class TestController extends Controller
      * @throws \Exception
      * @author Blues
      * @ATU\Api(
-     *     @ATU\Before("createTest",{"param":"not use"}),
-     *     @ATU\Request({"title":"测试","content":@ATU\GetParam("test.title"),"user_id":"123"}),
+     *     @ATU\Before("create",{TestTest::class,{"title":"测试22"} }),
+     *     @ATU\Request({"title":@ATU\GetParam("TestTest.title"),"content":@ATU\GetParam("TestTest.title"),"user_id":"123"}),
      *     @ATU\Response({
      *        "data":{"id":true,"title":@ATU\GetRequest("title")}
      *       },
-     *       @ATU\Assert("assertSee",{"测试"}),
+     *       @ATU\Assert("assertSee",{@ATU\GetParam("TestTest.title")}),
      *       @ATU\Assert("assertSee",{@ATU\GetRequest("title")}),
      *       @ATU\Assert("assertJson", {{"data":@ATU\GetRequest}} ),
      *       @ATU\Assert("assertOk"),
@@ -131,11 +134,11 @@ class TestController extends Controller
      * @throws \Exception
      * @author Blues
      * @ATU\Api(
-     *     path=0,
+     *     path="latest",
      *     @ATU\Response(),
      * )
      * @ATU\Api(
-     *     path=0,
+     *     path="latest",
      *     @ATU\Request({"title":333}),
      * )
      */
@@ -154,7 +157,6 @@ class TestController extends Controller
      * @ATU\Api(
      *    title="删除测试",
      *    path="1",
-     *    @ATU\Now(),
      *    @ATU\Assert("assertDatabaseMissing",{"test_test",{"id":1}})
      * )
      */

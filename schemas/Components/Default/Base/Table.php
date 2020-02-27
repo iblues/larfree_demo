@@ -42,6 +42,8 @@ return function ($data, $component, $target) {
         ],
         'html' => ''
     ];
-
+    if(!is_array($data)){
+        apiError($target.'不存在',null,404);
+    }
     return array_merges($def, $data);
 };

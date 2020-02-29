@@ -4,7 +4,7 @@
  * @author blues
  */
 namespace App\Services\Admin;
-use App\Models\Admin\AdminNav;
+use Larfree\Models\Admin\AdminNav;
 use Larfree\Services\SimpleLarfreeService;
 
 class AdminNavService extends SimpleLarfreeService

@@ -26,9 +26,13 @@ class NavController extends Controller
     /**
      * 获取树状结构的菜单栏
      * @return array
-     * @ATU\Api()
+     * @ATU\Api(
+     *     @ATU\Login(1),
+     *     @ATU\Response({"data":{{"id":true}} })
+     * )
      */
     public function tree(){
+
         $nav = $this->service->getTreeNav();
         return $nav;
     }

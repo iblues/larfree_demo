@@ -59,15 +59,6 @@ class TestController extends Controller
     }
 
     /**
-     *  没有路由的方法,用来测试ATU用
-     *  @ATU\Api(
-     *     @ATU\Ignore
-     * )
-     */
-    public function noRoute(){
-    }
-
-    /**
      * @param $id
      * @param Request $request
      * @return \Illuminate\Database\Eloquent\Model

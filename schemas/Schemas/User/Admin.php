@@ -41,7 +41,7 @@ return [
             'multi'=>true,
             'component_param'=>[
                 'key'=>'id',
-                'name'=>'{{name}}',
+                'name'=>'{{id}}:{{name}}',
                 'api'=>'/permission/roles'//指定api地址.
             ],
         ],

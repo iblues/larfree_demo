@@ -104,8 +104,8 @@ class AtuDevTest extends TestCase
     public function testNow()
     {
         $this->AtuSetUp();
-        $this->doNow();
-//        $this->doNow(['tag'=>'test2']);
+//        $this->doNow();
+        $this->doNow(['tag'=>'test2']);
     }
 
     /**

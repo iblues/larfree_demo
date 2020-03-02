@@ -16,6 +16,7 @@ return [
                 'id',
                 'name',
                 'user_id',
+                'roles',
                 'status',
                 'created_at',
             ],

@@ -31,7 +31,6 @@ class SessionController extends Controller
         parent::__construct();
     }
 
-
     /**
      * 登录
      * @author Blues
@@ -40,6 +39,7 @@ class SessionController extends Controller
      * @throws \Larfree\Exceptions\ApiException
      * @ATU\Api(
      *     title="后台登录接口",
+     *     @ATU\Now(),
      *     @ATU\Request({"phone":"18008010521","password":123}),
      *     @ATU\Response({"data":{"token":true}})
      * )
@@ -62,4 +62,5 @@ class SessionController extends Controller
         //前端清理掉token即可
         return '退出成功';
     }
+
 }

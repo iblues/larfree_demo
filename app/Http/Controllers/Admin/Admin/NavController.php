@@ -28,7 +28,7 @@ class NavController extends Controller
      * @return array
      * @ATU\Api(
      *     @ATU\Login(1),
-     *     @ATU\Response({"data":{{"id":true}} })
+     *     @ATU\Response({"data":{{"id":4}} })
      * )
      */
     public function tree(){

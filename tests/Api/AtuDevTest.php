@@ -62,19 +62,6 @@ class AtuDevTest extends TestCase
      */
     protected $debug=false;
 
-    /**
-     * setUp会执行多次, 如果只想执行一次,请用AtuSetUp代替
-     * @author Blues
-     */
-    public function AtuSetUp(){
-        //仅执行一次
-        static $done = false;
-        if($done){
-            return '';
-        }
-        $done=true;
-    }
-
 
     /**
      * 读取所有带有@ATU\Api注解的,看是否有对应的路由匹配. 如果没有匹配路由就报错. 可用@ignore暂时忽略
@@ -92,7 +79,6 @@ class AtuDevTest extends TestCase
      */
     public function testAll()
     {
-        $this->AtuSetUp();
          $this->doAll();
     }
 
@@ -103,9 +89,8 @@ class AtuDevTest extends TestCase
      */
     public function testNow()
     {
-        $this->AtuSetUp();
-//        $this->doNow();
-        $this->doNow(['tag'=>'test2']);
+        $this->doNow();
+//        $this->doNow(['tag'=>'test2']);
     }
 
     /**

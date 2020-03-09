@@ -43,14 +43,13 @@ return [
         'api' => [
             'name' => '权限类型',
             'tip' => '',
-            'type' => 'select',
+            'type' => 'tree',
             //先暂停该字段
-//            'link' =>[],
+            'link' =>[],
             'component_param'=>[
-                'key'=>'target_id',
-                'value'=>'name',
-//                'api'=>'/{$COMPONENT_API}/nav/tree',
-                'api'=>'/admin/nav/tree'//指定api地址.
+                'key'=>'id',
+                'value'=>'comment',
+                'api'=>'/permission/permission/api/tree '//指定api地址.
             ],
             'sql_type' => 'varchar(191)',
         ],

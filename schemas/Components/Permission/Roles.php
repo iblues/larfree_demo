@@ -22,6 +22,7 @@ return [
                 'name',
                 'guard_name',
                 'nav',
+                'api',
             ],
         ],
         'edit' => [
@@ -29,6 +30,7 @@ return [
                 'name',
                 'guard_name',
                 'nav',
+                'api',
             ],
         ],
         'detail' => [

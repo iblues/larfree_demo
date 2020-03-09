@@ -1,4 +1,5 @@
 <?php
+use \LarfreePermission\Services\Permission\PermissionPermissionsService;
 return function ($data, $component, $target) {
     $def = [
         'fields' => [],
@@ -15,14 +16,15 @@ return function ($data, $component, $target) {
         ],
         'search' => [],
         'config' => [
-            'api' => '/{$COMPONENT_API}',
-            'quick_change_api' => '/{$COMPONENT_API}/{{id}}',
+            'api' => 'GET:///{$COMPONENT_API}',
+            'quick_change_api' => 'PUT:///{$COMPONENT_API}/{{id}}',
             'button' => [
                 'add' => [
                     'type' => 'primary',
                     'html' => '添加',
                     'action' => 'add',
-                    'url' => '/dialog/edit/{$COMPONENT}'
+                    'url' => '/dialog/edit/{$COMPONENT}',
+                    'api' => 'POST:///{$COMPONENT_API}',
                 ],
             ],
             'action' => [
@@ -31,12 +33,13 @@ return function ($data, $component, $target) {
                     'html' => '编辑',
                     'action' => '/',
                     'url' => '/dialog/edit/{$COMPONENT}/{{id}}',
+                    'api' => 'PUT:///{$COMPONENT_API}',
                 ],
                 'del' => [
                     'type' => 'danger',
                     'html' => '删除',
                     'action' => 'delRows',
-                    'api' => '/{$COMPONENT_API}/{{id}}',
+                    'api' => 'DELETE:///{$COMPONENT_API}/{{id}}',
                 ],
             ]
         ],

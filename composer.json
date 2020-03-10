@@ -13,8 +13,8 @@
         "caouecs/laravel-lang": "^4.0",
         "fideloper/proxy": "^4.0",
         "iblues/annotation-test-unit": "dev-master",
-        "iblues/larfree": "dev-dev",
-        "iblues/larfree-permission": "dev-dev",
+        "iblues/larfree": "dev-master",
+        "iblues/larfree-permission": "dev-master",
         "kalnoy/nestedset": "^5.0",
         "laravel/framework": "^6.0.0",
         "laravel/tinker": "^1.0",
@@ -28,6 +28,7 @@
         "beyondcode/laravel-dump-server": "^1.0",
         "filp/whoops": "^2.0",
         "fzaninotto/faker": "^1.4",
+        "laravel/telescope": "^3.1",
         "mockery/mockery": "^1.0",
         "nunomaduro/collision": "^2.0",
         "phpunit/phpunit": "^8.0"
@@ -69,28 +70,5 @@
         "optimize-autoloader": true
     },
     "minimum-stability": "dev",
-    "prefer-stable": true,
-    "repositories": {
-        "0": {
-            "type": "path",
-            "url": "../larfree",
-            "options": {
-                "symlink": true
-            }
-        },
-        "1": {
-            "type": "path",
-            "url": "/Users/lanyang/Desktop/www/composer/larfree-permission",
-            "options": {
-                "symlink": true
-            }
-        },
-        "2": {
-            "type": "path",
-            "url": "/Users/lanyang/Desktop/www/composer/AnnotationTest",
-            "options": {
-                "symlink": true
-            }
-        }
-    }
+    "prefer-stable": true
 }

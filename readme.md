@@ -1,18 +1,13 @@
-#安装Larfree
+clone 下来
+composer install
 
-##1.发布资源
+就可以直接用了
 
-php artisan publish 
+内置了
+ATU,
+Larfree
+Larfree-permission
+telescope
 
-选择larfree
-
-##2.添加中间件
-kernel.php
-
-     protected $middlewareGroups = [
-            'api' => [
-                ...
-                \Larfree\Middleware\ApiFormat::class, //Api格式化用
-                \Larfree\Middleware\ApiDoc::class,  //记录返回格式用的
-            ],
-      ];
+后台地址为
+/admin/ (可以自行在路由那更改)

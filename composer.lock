@@ -1061,12 +1061,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/iblues/annotation-test-unit.git",
-                "reference": "f5a489df2aff3b288c867a5dba5396bbc19dac33"
+                "reference": "770785112da1305d5c9968f0dbc6656436414f18"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/iblues/annotation-test-unit/zipball/f5a489df2aff3b288c867a5dba5396bbc19dac33",
-                "reference": "f5a489df2aff3b288c867a5dba5396bbc19dac33",
+                "url": "https://api.github.com/repos/iblues/annotation-test-unit/zipball/770785112da1305d5c9968f0dbc6656436414f18",
+                "reference": "770785112da1305d5c9968f0dbc6656436414f18",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1106,7 +1106,7 @@
                 }
             ],
             "description": " Base on annotation's and laravel phpunit.一个基于注解和laravel单元测试的 自动化测试包",
-            "time": "2020-03-04T14:30:47+00:00"
+            "time": "2020-03-10T03:22:33+00:00"
         },
         {
             "name": "iblues/larfree",
@@ -1114,12 +1114,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/iblues/larfree.git",
-                "reference": "ea308b1e1e145a637c62ca688c594bfca5674bf2"
+                "reference": "758dda4463726569a52c3503f71c34c8fa0b35c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/iblues/larfree/zipball/ea308b1e1e145a637c62ca688c594bfca5674bf2",
-                "reference": "ea308b1e1e145a637c62ca688c594bfca5674bf2",
+                "url": "https://api.github.com/repos/iblues/larfree/zipball/758dda4463726569a52c3503f71c34c8fa0b35c1",
+                "reference": "758dda4463726569a52c3503f71c34c8fa0b35c1",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1168,7 +1168,7 @@
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
-            "time": "2020-03-09T15:49:18+00:00"
+            "time": "2020-03-10T03:20:21+00:00"
         },
         {
             "name": "iblues/larfree-permission",

@@ -15,8 +15,8 @@ class SessionController extends Controller
 {
     public $in = [
         'store' => [
-            'phone' => [
-                'name' => '邮箱地址', // 无model支持.所以需要自定义名字
+            'email' => [
+                'name' => '邮箱', // 无model支持.所以需要自定义名字
                 'rule' => 'required'
             ],
             'password' => [
@@ -39,14 +39,13 @@ class SessionController extends Controller
      * @throws \Larfree\Exceptions\ApiException
      * @ATU\Api(
      *     title="后台登录接口",
-     *     @ATU\Now(),
-     *     @ATU\Request({"phone":"18008010521","password":123}),
+     *     @ATU\Request({"email":"i@iblues.name","password":123}),
      *     @ATU\Response({"data":{"token":true}})
      * )
      */
     public function store(Request $request)
     {
-        $credentials = $request->only('phone', 'password');
+        $credentials = $request->only('email', 'password');
         if ($token = Auth::guard('api')->attempt($credentials)) {
             $this->setMsg('登录成功');
             $user = getLoginUser();

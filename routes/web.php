@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return 'larfree';
 });
 
 Route::get('api/admin/swagger/json',  'Admin\SwaggerController@getJson');//swagger定义

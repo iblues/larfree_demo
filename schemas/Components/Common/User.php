@@ -38,6 +38,11 @@ return [
                 //'updated_at'
             ],
         ],
+        'password' => [
+            'fields' => [
+                'password'
+            ],
+        ],
         'add' => [
             'fields' => [
                 'name',

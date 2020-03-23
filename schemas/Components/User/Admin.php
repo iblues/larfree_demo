@@ -6,37 +6,61 @@
 return [
     'detail' => [
         'table' => [
-            'search'=>[
+            'search' => [
                 'name',
                 'user_id',
                 'roles',
-                'status',
+                'state',
             ],
             'fields' => [
                 'id',
                 'name',
                 'user_id',
                 'roles',
-                'status',
+                'state',
                 'created_at',
             ],
         ],
         'add' => [
             'fields' => [
                 'name',
-                'user_id',
+                'user_id'=>[
+                    'tip'=>'可不填,会创建新用户',
+                ],
+                'email'=>[
+                    'name'=>'邮箱',
+                    'type'=>'email',
+                    'tip'=>'用于登录',
+                ],
+                'password'=>[
+                    'name'=>'密码',
+                    'type'=>'password',
+                    'require'=>'require',
+                    'tip'=>'此密码和前台用户密码通用'
+                ],
                 'roles',
                 'comment',
-                'status'
+                'state'
             ],
         ],
         'edit' => [
             'fields' => [
                 'name',
                 'user_id',
+                'user.email'=>[
+                    'name'=>'修改邮箱',
+                    'type'=>'email',
+                    'tip'=>'用于登录',
+                ],
+                'user.password'=>[
+                    'name'=>'密码',
+                    'type'=>'password',
+                    'require'=>'require',
+                    'tip'=>'此密码和前台用户密码通用'
+                ],
                 'roles',
                 'comment',
-                'status'
+                'state'
             ],
         ],
         'detail' => [
@@ -46,7 +70,7 @@ return [
                 'user_id',
                 'roles',
                 'comment',
-                'status',
+                'state',
                 'created_at',
             ],
         ],

@@ -25,7 +25,7 @@ return [
                     'user_id',
                     'id',
                 ],
-                'field' => ['id', 'name','email']
+                'field' => ['id', 'name','email','phone']
             ],
             'component_param' => [
                 'key' => 'id',

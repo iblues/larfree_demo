@@ -60,7 +60,7 @@ class AtuDevTest extends TestCase
      * 是否开启全局debug模式.相当于给每个都加了@DEBUG
      * @var bool
      */
-    protected $debug=false;
+    protected $debug=true;
 
 
     /**
@@ -90,7 +90,7 @@ class AtuDevTest extends TestCase
     public function testNow()
     {
         $this->doNow();
-//        $this->doNow(['tag'=>'test2']);
+//        $this->doNow(['tag'=>'add.user.admin']);
     }
 
     /**
@@ -108,6 +108,5 @@ class AtuDevTest extends TestCase
         $model = $this->userModel::firstOrCreate($user);
         $this->setParam('user', $model);
     }
-
 
 }

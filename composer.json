@@ -12,7 +12,7 @@
         "barryvdh/laravel-cors": "^0.11.2",
         "caouecs/laravel-lang": "^4.0",
         "fideloper/proxy": "^4.0",
-        "iblues/annotation-test-unit": "dev-master",
+        "iblues/atu": "dev-master",
         "iblues/larfree": "dev-dev",
         "iblues/larfree-permission": "dev-dev",
         "kalnoy/nestedset": "^5.0",

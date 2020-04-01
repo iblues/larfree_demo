@@ -6,6 +6,7 @@ use App\Models\Common\CommonUser;
 use Carbon\Carbon;
 use Iblues\AnnotationTestUnit\Traits\ApiTest;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Illuminate\Support\Facades\Log;
 use Larfree\Models\Test\TestTest;
 use Tests\TestCase;
 

@@ -6,37 +6,79 @@
 return [
     'detail' => [
         'table' => [
-            'search'=>[
+            'config' => [
+                'action' => [
+                    'password' => [
+                        'type' => 'primary',
+                        'html' => '密码',
+                        'action' => '/',
+                        'url' => '/dialog/edit/common.user/{{user_id}}/password',
+                        'api' => 'PUT:///common.user',
+                    ],
+                ],
+            ],
+            'search' => [
                 'name',
-                'user_id',
+                'user.phone' => [
+                    'name' => '手机号',
+                    'type' => 'phone',
+                ],
+                'user.email' => [
+                    'name' => '邮箱',
+                    'type' => 'email',
+                ],
                 'roles',
-                'status',
+                'state',
             ],
             'fields' => [
                 'id',
                 'name',
-                'user_id',
+                'user.phone' => [
+                    'name' => '手机号',
+                    'type' => 'phone',
+                ],
+                'user.email' => [
+                    'name' => '邮箱',
+                    'type' => 'email',
+                ],
                 'roles',
-                'status',
+                'state',
                 'created_at',
             ],
         ],
         'add' => [
             'fields' => [
                 'name',
-                'user_id',
+                'user.email' => [
+                    'name' => '邮箱',
+                    'type' => 'email',
+                    'tip' => '用于登录',
+                ],
+                'user.phone' => [
+                    'name' => '手机号',
+                    'type' => 'email',
+                    'tip' => '会优先以手机号去匹配用户',
+                ],
+                'user.password' => [
+                    'name' => '密码',
+                    'type' => 'password',
+                    'require' => 'require',
+                    'tip' => '此密码和前台用户密码通用'
+                ],
                 'roles',
                 'comment',
-                'status'
+                'state'
             ],
         ],
         'edit' => [
             'fields' => [
                 'name',
-                'user_id',
+                'user_id' => [
+                    'tip' => '邮箱/手机号请前往账号中心修改',
+                ],
                 'roles',
                 'comment',
-                'status'
+                'state'
             ],
         ],
         'detail' => [
@@ -46,7 +88,7 @@ return [
                 'user_id',
                 'roles',
                 'comment',
-                'status',
+                'state',
                 'created_at',
             ],
         ],

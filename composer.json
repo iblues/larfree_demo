@@ -12,6 +12,9 @@
         "barryvdh/laravel-cors": "^0.11.2",
         "caouecs/laravel-lang": "^4.0",
         "fideloper/proxy": "^4.0",
+        "iblues/atu": "dev-master",
+        "iblues/larfree": "dev-dev",
+        "iblues/larfree-permission": "dev-dev",
         "iblues/annotation-test-unit": "dev-master",
         "iblues/larfree": "dev-master",
         "iblues/larfree-permission": "dev-master",
@@ -28,7 +31,7 @@
         "beyondcode/laravel-dump-server": "^1.0",
         "filp/whoops": "^2.0",
         "fzaninotto/faker": "^1.4",
-        "laravel/telescope": "^3.1",
+        "laravel/telescope": "^3.2",
         "mockery/mockery": "^1.0",
         "nunomaduro/collision": "^2.0",
         "phpunit/phpunit": "^8.0"

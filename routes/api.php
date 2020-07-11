@@ -13,7 +13,7 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->group(function (){
+Route::middleware('api.auth')->group(function (){
     Route::apiResource('common/user', 'Api\Common\UserController');//用户管理
     Route::apiResource('common/pay', 'Api\Common\PayController');//支付管理
     Route::apiResource('test/test', 'Api\Test\TestController');//自动添加-API

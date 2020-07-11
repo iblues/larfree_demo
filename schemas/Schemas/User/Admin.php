@@ -25,6 +25,7 @@ return [
                     'user_id',
                     'id',
                 ],
+                'as'=>'user',
                 'field' => ['id', 'name','email','phone']
             ],
             'component_param' => [

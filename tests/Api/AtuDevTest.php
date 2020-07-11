@@ -29,7 +29,7 @@ class AtuDevTest extends TestCase
     /**
      * 是否启用缓存,加速解析.
      */
-    protected $cache = false;
+    protected $cache = true;
 
     /**
      * 用户模型,用于登录使用.
@@ -54,14 +54,14 @@ class AtuDevTest extends TestCase
      * 满足要求的api不执行
      * @var array
      */
-    public $blackList = ['get'=>[]];
+    public $blackList = ['get' => []];
 //    protected $blackList = ['get' => ['/\/api\/admin\/.*?/i'], 'put'=>['\/api\/[^((?!admin).)*$]', 'delete'=>'', 'post'=>''];
 
     /**
      * 是否开启全局debug模式.相当于给每个都加了@DEBUG
      * @var bool
      */
-    protected $debug=true;
+    protected $debug = false;
 
 
     /**
@@ -80,7 +80,7 @@ class AtuDevTest extends TestCase
      */
     public function testAll()
     {
-         $this->doAll();
+        $this->doAll();
     }
 
     /**

@@ -1058,7 +1058,7 @@
             "dist": {
                 "type": "path",
                 "url": "/Users/lanyang/Desktop/www/composer/AnnotationTest",
-                "reference": "3fb154e02d2458ee8961133d04bda91b0b83bcbe"
+                "reference": "be37a95f553ac167e34b2dfc58198301cf33bc82"
             },
             "require": {
                 "doctrine/annotations": "^1.8",

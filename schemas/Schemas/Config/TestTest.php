@@ -21,8 +21,6 @@ return [
                 'model'=>[
                     'belongsTo',
                     'App\\Models\\Common\\CommonUser',
-                    'user_id',
-                    'id'
                 ],
                 'as'=>'user',
 //                    'where'=>[

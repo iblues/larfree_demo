@@ -1173,12 +1173,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/iblues/larfree-permission.git",
-                "reference": "1fe6d30cc55a384d31a6ac44e5bfdd9a9d86c15f"
+                "reference": "2c40a87ba38a0a345332c5db927706eaea7c4612"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/iblues/larfree-permission/zipball/1fe6d30cc55a384d31a6ac44e5bfdd9a9d86c15f",
-                "reference": "1fe6d30cc55a384d31a6ac44e5bfdd9a9d86c15f",
+                "reference": "2c40a87ba38a0a345332c5db927706eaea7c4612",
                 "shasum": "",
                 "mirrors": [
                     {
